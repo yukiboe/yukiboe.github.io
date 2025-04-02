@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+/* general styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* パディングやボーダーを含めた幅計算 */
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* 横スクロールを無効化 */
+}
+html {
+    font-size: 100%; /* 基準フォントサイズ */
+}
+body {
+    font-family: "Yu Gothic Medium", YuGothic, sans-serif;
+    line-height: 1.7;
+    color: black;
+}
+a {
+    text-decoration: none;
+}
+img, iframe {
+    max-width: 100%; /* 親要素の幅に収める */
+    height: auto; /* アスペクト比を維持 */
+}
+
+/* header styles */
+.headerlogo {
+    width: 10%; /* ロゴの幅を画面幅の10%に設定 */
+    margin-top: 1rem; /* 相対単位で余白を設定 */
+}
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 縦方向の中央揃え */
+    margin: 0; /* 外側余白を削除 */
+    padding: 0; /* 内側余白を削除 */
+    background-color: #fff;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* 下に影を追加 */
+    position: fixed; /* ヘッダーを固定 */
+    top: 0;
+    left: 0;
+    width: 100%; /* ヘッダーを画面幅いっぱいに広げる */
+    z-index: 1000; /* 他の要素より前面に表示 */
+}
+
+/* navigation styles */
+.nav {
+    display: flex;
+    font-size: 1rem; /* フォントサイズを相対単位で設定 */
+    text-transform: uppercase;
+    list-style: none; /* リストボタンを消す */
+    margin: 0;
+    padding: 0;
+}
+.nav li {
+    margin-left: 2rem; /* リスト項目間の余白を設定 */
+}
+.nav a {
+    color: black;
+}
+
+/* main content */
+.wrapper {
+    max-width: 100%; /* 最大幅を画面幅に制限 */
+    margin: 0; /* 中央揃え */
+    padding: 0; /* 内側の余白を調整 */
+    box-sizing: border-box; /* パディングを含めた幅計算 */
+}
+main {
+    margin-top: 6rem; /* ヘッダーの高さ分の余白を追加 */
+}
+
+/* access map styles */
+.access-map iframe {
+    width: 100%; /* 親要素の幅に合わせる */
+    height: auto; /* 高さを自動調整 */
+    aspect-ratio: 16 / 9; /* アスペクト比を維持 */
+    margin: 0;
+    padding: 0;
+    border: 0; /* 枠線を削除 */
+}
+
+/* メディアクエリ */
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column; /* ヘッダーを縦並びに変更 */
+        align-items: flex-start;
+        padding: 1rem; /* 内側余白を調整 */
+    }
+
+    .headerlogo {
+        width: 20%; /* ロゴの幅を調整 */
+        margin-bottom: 1rem; /* 下に余白を追加 */
+    }
+
+    .nav {
+        flex-direction: column; /* ナビゲーションを縦並びに変更 */
+        gap: 1rem; /* 項目間の余白を設定 */
+    }
+
+    .nav li {
+        margin-left: 0; /* 左余白を削除 */
+    }
+
+    main {
+        margin-top: 8rem; /* ヘッダーの高さ分の余白を調整 */
+    }
+
+    .access-map iframe {
+        aspect-ratio: 4 / 3; /* タブレットサイズでアスペクト比を変更 */
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 90%; /* スマホ用にフォントサイズを縮小 */
+    }
+
+    .page-header {
+        padding: 0.5rem 1rem; /* 内側余白をさらに調整 */
+    }
+
+    .headerlogo {
+        width: 25%; /* ロゴの幅をさらに調整 */
+    }
+
+    .nav {
+        font-size: 0.9rem; /* ナビゲーションのフォントサイズを縮小 */
+    }
+
+    .wrapper {
+        padding: 1rem 0; /* 上下の余白を調整 */
+    }
+
+    .access-map iframe {
+        aspect-ratio: 1 / 1; /* スマホサイズで正方形に近い比率に変更 */
+    }
+}
