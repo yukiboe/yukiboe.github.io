@@ -130,6 +130,14 @@ main {
     transition: margin-top 0.3s; /* スムーズな移動を追加 */
 }
 
+/* main styles */
+.main {
+    max-width: 90%; /* 横幅を最大90%に制限 */
+    margin: 0 auto; /* 中央に配置 */
+    padding: 1rem; /* 内側に余白を追加 */
+    box-sizing: border-box; /* ボックスモデルを統一 */
+}
+
 /* access map styles */
 .access-map iframe {
     width: 100%; /* 親要素の幅に合わせる */
