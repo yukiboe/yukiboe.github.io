@@ -89,6 +89,7 @@ img, iframe {
     z-index: 1100;
 }
 
+/* ハンバーガーボタンの通常状態 */
 .hamburger-menu span {
     display: block;
     width: 100%;
@@ -96,6 +97,19 @@ img, iframe {
     background-color: black;
     border-radius: 0.125rem;
     transition: transform 0.3s, opacity 0.3s;
+}
+
+/* ハンバーガーボタンがアクティブ（✖印）になったとき */
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(0.25rem, 0.25rem);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0; /* 真ん中の線を非表示 */
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(0.25rem, -0.25rem);
 }
 
 /* main content */

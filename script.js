@@ -12,12 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
     hamburgerMenu.addEventListener("click", () => {
         navWrapper.classList.toggle("open");
         menuMask.classList.toggle("active");
+        hamburgerMenu.classList.toggle("active"); // ボタンの状態を切り替え
     });
 
     // メニューを閉じる
     menuMask.addEventListener("click", () => {
         navWrapper.classList.remove("open");
         menuMask.classList.remove("active");
+        hamburgerMenu.classList.remove("active"); // ボタンの状態をリセット
     });
 
     const header = document.querySelector(".page-header");
