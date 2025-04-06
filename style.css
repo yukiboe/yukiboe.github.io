@@ -39,17 +39,17 @@ img, iframe {
     margin-top: 1rem; /* 相対単位で余白を設定 */
 }
 .page-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* 縦方向の中央揃え */
-    margin: 0; /* 外側余白を削除 */
-    padding: 0; /* 内側余白を削除 */
-    background-color: #fff;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* 下に影を追加 */
+    display: flex; /* Flexboxを使用して子要素を配置 */
+    align-items: center; /* 子要素を垂直方向に中央揃え */
+    justify-content: space-between; /* ロゴとハンバーガーボタンを左右に配置 */
+    max-width: 90%; /* 横幅を最大90%に制限 */
+    margin: 0 auto; /* ヘッダー全体を中央に配置 */
+    padding: 1rem 0; /* 上下の余白を追加 */
+    background-color: #fff; /* 背景色を白に設定 */
     position: fixed; /* ヘッダーを固定 */
     top: 0;
     left: 0;
-    width: 100%; /* ヘッダーを画面幅いっぱいに広げる */
+    right: 0;
     z-index: 1000; /* 他の要素より前面に表示 */
 }
 
