@@ -137,7 +137,7 @@ main {
 /* フッターのスタイル */
 footer {
     text-align: center; /* 中央揃え */
-    background-color: red; /* 背景色を変更（薄いグレー） */
+    background-color: #dc4542; /* 背景色を変更（薄いグレー） */
     padding: 1rem 0; /* 上下に余白を追加 */
     color: white; /* テキストの色を変更 */
     font-size: 0.9rem; /* フォントサイズを調整 */
