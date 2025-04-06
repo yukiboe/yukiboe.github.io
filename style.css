@@ -106,7 +106,8 @@ img, iframe {
     box-sizing: border-box; /* パディングを含めた幅計算 */
 }
 main {
-    margin-top: 6rem; /* ヘッダーの高さ分の余白を追加 */
+    margin-top: 0; /* 初期値を設定 */
+    transition: margin-top 0.3s; /* スムーズな移動を追加 */
 }
 
 /* access map styles */
