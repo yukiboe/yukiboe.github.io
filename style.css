@@ -136,12 +136,26 @@ main {
 
 /* フッターのスタイル */
 footer {
-    text-align: center; /* 中央揃え */
-    background-color: #dc4542; /* 背景色を変更（薄いグレー） */
-    padding: 1rem 0; /* 上下に余白を追加 */
-    color: white; /* テキストの色を変更 */
-    font-size: 0.9rem; /* フォントサイズを調整 */
-    border-top: 1px solid #ddd; /* 上部に薄い境界線を追加 */
+    text-align: center;
+    background-color: #dc4542; /* 背景色を薄いグレーに設定 */
+    padding: 1rem 0;
+    color: #fffff;
+    font-size: 0.9rem;
+    border-top: 1px solid #ddd;
+}
+
+/* フッター内のコンテンツを横並びにする */
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; /* 画像とテキストの間に余白を追加 */
+}
+
+/* フッターのロゴ画像 */
+.footer-logo {
+    width: 40px; /* ロゴの幅を適切に調整 */
+    height: auto; /* アスペクト比を維持 */
 }
 
 /* メディアクエリ */
