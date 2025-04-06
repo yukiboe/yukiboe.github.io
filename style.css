@@ -134,6 +134,16 @@ main {
     border: 0; /* 枠線を削除 */
 }
 
+/* フッターのスタイル */
+footer {
+    text-align: center; /* 中央揃え */
+    background-color: red; /* 背景色を変更（薄いグレー） */
+    padding: 1rem 0; /* 上下に余白を追加 */
+    color: white; /* テキストの色を変更 */
+    font-size: 0.9rem; /* フォントサイズを調整 */
+    border-top: 1px solid #ddd; /* 上部に薄い境界線を追加 */
+}
+
 /* メディアクエリ */
 @media (max-width: 768px) {
     .page-header {
