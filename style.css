@@ -169,8 +169,11 @@ footer {
     display: flex;
     flex-wrap: wrap; /* 必要に応じて折り返し */
     align-items: center;
-    justify-content: center;
-    gap: 1rem; /* 要素間の余白 */
+    justify-content: center; /* 要素を中央揃え */
+    gap: 2rem; /* 要素間の余白を調整 */
+    max-width: 1200px; /* コンテナの最大幅を設定 */
+    margin: 0 auto; /* コンテナ自体を中央揃え */
+    padding: 0 1rem; /* 左右に余白を追加して中央揃えを補助 */
 }
 
 /* concept-logo のスタイル */
@@ -182,8 +185,9 @@ footer {
 
 /* concept-explanation のスタイル */
 .concept-explanation {
-    flex: 2; /* 横並び時に説明部分を広く取る */
-    text-align: left; /* テキストを左揃え */
+    flex: 1; /* 横並び時に均等に幅を取る */
+    max-width: 600px; /* 説明部分の最大幅を設定 */
+    text-align: center; /* 説明文を中央揃え */
 }
 
 /* media query */
