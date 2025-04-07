@@ -25,6 +25,15 @@ h1 {
     font-weight: bold; /* 太字に設定 */
     color: #dc4542;
 }
+h2 {
+    display: inline-block; /* 背景色を文字の幅に合わせる */
+    background-color: #dc4542; /* 背景色を設定 */
+    color: #ffffff; /* 文字色を白に設定 */
+    padding: 0.5rem 1rem; /* 内側の余白を設定 */
+    border-radius: 0.25rem; /* 角を少し丸める */
+    font-size: 1.5rem; /* フォントサイズを調整 */
+    font-weight: bold; /* 太字に設定 */
+}
 a {
     text-decoration: none;
 }
