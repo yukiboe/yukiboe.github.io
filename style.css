@@ -182,12 +182,60 @@ footer {
     border-top: 1px solid #ddd;
 }
 
+/* フッター全体のスタイル */
+.footer-container {
+    display: flex; /* Flexboxを使用して左右に分割 */
+    justify-content: space-between; /* 子要素を左右に配置 */
+    align-items: center; /* 子要素を中央揃え */
+    padding: 1rem; /* 内側の余白を設定 */
+    background-color: #dc4542; /* 背景色を設定 */
+    color: #ffffff; /* テキスト色を白に設定 */
+    flex-wrap: wrap; /* 必要に応じて折り返し */
+}
+
+/* contact セクションのスタイル */
+.contact {
+    flex: 1; /* 左右均等に幅を取る */
+    text-align: center; /* テキストを中央揃え */
+}
+
+/* access セクションのスタイル */
+.access {
+    flex: 1; /* 左右均等に幅を取る */
+    text-align: center; /* テキストを中央揃え */
+}
+
+/* iframe のスタイル */
+.access iframe {
+    margin-top: 0.5rem; /* 上部に余白を追加 */
+    max-width: 100%; /* 親要素の幅に収める */
+    height: auto; /* 高さを自動調整 */
+    aspect-ratio: 16 / 9; /* アスペクト比を維持 */
+}
+
 /* フッター内のコンテンツを横並びにする */
-.footer-content {
+.copyright-container {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem; /* 画像とテキストの間に余白を追加 */
+}
+
+/* フッターのテキスト部分 */
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* フッターのテキスト部分のスタイル */
+.access {
+    text-align: center; /* テキストを中央揃え */
+    display: flex; /* フレックスボックスを使用 */
+    flex-direction: column; /* 縦方向に配置 */
+    align-items: center; /* 子要素を中央揃え */
+    gap: 0.5rem; /* 子要素間の余白を設定 */
 }
 
 /* フッターのロゴ画像 */
