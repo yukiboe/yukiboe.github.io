@@ -46,16 +46,19 @@ img, iframe {
 
 /* header styles */
 .headerlogo {
-    width: 10%; /* ロゴの幅を画面幅の10%に設定 */
-    margin-top: 1rem; /* 相対単位で余白を設定 */
+    height: 50px; /* ロゴの高さを固定 */
+    width: auto; /* アスペクト比を維持して幅を自動調整 */
+    margin-top: 0; /* 上部の余白を削除または調整 */
+    margin-bottom: 0; /* 下部の余白を削除または調整 */
 }
 .page-header {
+    height: auto; /* 高さを自動調整 */
+    padding: 0.5rem 0; /* 上下の余白を調整 */
     display: flex; /* Flexboxを使用して子要素を配置 */
     align-items: center; /* 子要素を垂直方向に中央揃え */
-    justify-content: space-between; /* ロゴとハンバーガーボタンを左右に配置 */
+    justify-content: space-between; /* ロゴとナビゲーションを左右に配置 */
     max-width: 90%; /* 横幅を最大90%に制限 */
     margin: 0 auto; /* ヘッダー全体を中央に配置 */
-    padding: 1rem 0; /* 上下の余白を追加 */
     background-color: #fff; /* 背景色を白に設定 */
     position: fixed; /* ヘッダーを固定 */
     top: 0;
