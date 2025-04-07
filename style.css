@@ -129,6 +129,9 @@ img, iframe {
 }
 
 /* main content */
+section {
+    margin-bottom: 2rem; /* 各セクションの下に余白を追加 */
+}
 .headline {
     display: inline-block; /* 背景色を文字の幅に合わせる */
     background-color: #dc4542; /* 背景色を設定 */
