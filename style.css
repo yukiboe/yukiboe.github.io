@@ -21,18 +21,18 @@ body {
 }
 h1 {
     font-size: 4rem; /* 適切なフォントサイズを設定 */
-    font-family: "Almendra Bold", serif;
+    font-family: "Almendra", serif;
     font-weight: bold; /* 太字に設定 */
     color: #dc4542;
 }
 h2 {
     font-size: 1.5rem; /* 適切なフォントサイズを設定 */
-    font-family: serif;
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
     font-weight: bold; /* 太字に設定 */
 }
 h3 {
     font-size: 0.75rem; /* 適切なフォントサイズを設定 */
-    font-family: "Almendra Bold", serif;
+    font-family: "Almendra", serif;
     font-weight: bold; /* 太字に設定 */
 }
 a {
