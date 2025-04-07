@@ -284,8 +284,9 @@ footer {
     }
 
     .headerlogo {
-        width: 20%; /* ロゴの幅を調整 */
-        margin-bottom: 1rem; /* 下に余白を追加 */
+        height: 50px; /* 高さを固定 */
+        width: auto; /* アスペクト比を維持して幅を自動調整 */
+        max-width: none; /* 幅に制限を加えない */
     }
 
     .nav {
@@ -390,7 +391,9 @@ footer {
     }
 
     .headerlogo {
-        width: 25%; /* ロゴの幅をさらに調整 */
+        height: 40px; /* 高さを固定 */
+        width: auto; /* アスペクト比を維持して幅を自動調整 */
+        max-width: none; /* 幅に制限を加えない */
     }
 
     .nav {
