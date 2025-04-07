@@ -26,12 +26,13 @@ h1 {
     color: #dc4542;
 }
 h2 {
-    display: inline-block; /* 背景色を文字の幅に合わせる */
-    background-color: #dc4542; /* 背景色を設定 */
-    color: #ffffff; /* 文字色を白に設定 */
-    padding: 0.5rem 1rem; /* 内側の余白を設定 */
-    border-radius: 0.25rem; /* 角を少し丸める */
-    font-size: 1.5rem; /* フォントサイズを調整 */
+    font-size: 1.5rem; /* 適切なフォントサイズを設定 */
+    font-family: serif;
+    font-weight: bold; /* 太字に設定 */
+}
+h3 {
+    font-size: 0.75rem; /* 適切なフォントサイズを設定 */
+    font-family: "Almendra Bold", serif;
     font-weight: bold; /* 太字に設定 */
 }
 a {
@@ -128,6 +129,16 @@ img, iframe {
 }
 
 /* main content */
+.headline {
+    display: inline-block; /* 背景色を文字の幅に合わせる */
+    background-color: #dc4542; /* 背景色を設定 */
+    color: #ffffff; /* 文字色を白に設定 */
+    padding: 0.5rem 1rem; /* 内側の余白を設定 */
+    font-size: 1.5rem; /* フォントサイズを調整 */
+    font-weight: bold; /* 太字に設定 */
+    position: relative; /* 子要素の位置を制御 */
+    clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%); /* 花びら型の切れ込みを作成 */
+}
 .wrapper {
     max-width: 100%; /* 最大幅を画面幅に制限 */
     margin: 0; /* 中央揃え */
