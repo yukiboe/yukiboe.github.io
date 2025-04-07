@@ -219,6 +219,8 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 0.5rem; /* 画像とテキストの間に余白を追加 */
+    border-top: 2px solid #fff; /* 上部に白い線を追加 */
+    padding-top: 1rem; /* 線とコンテンツの間に余白を追加 */
 }
 
 /* フッターのテキスト部分 */
