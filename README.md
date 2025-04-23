@@ -7,3 +7,7 @@
 20250404
 GitHubにリモートレポジトリを追加
 GitHub Pagesにデプロイ：https://yukiboe.github.io/13thTogensai/
+
+20250422
+Cloudflare結合
+カスタムドメインを設定：https://togensai.jp
