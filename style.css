@@ -119,17 +119,15 @@ img, iframe {
     transition: transform 0.3s, opacity 0.3s;
 }
 
-/* ハンバーガーボタンがアクティブ（✖印）になったとき */
-.hamburger-menu.active span:nth-child(1) {
-    transform: rotate(45deg) translate(0.25rem, 0.25rem);
+/* ハンバーガーボタンがアクティブ（✖印）になったときのスタイルを削除 */
+.hamburger-menu.active span:nth-child(1),
+.hamburger-menu.active span:nth-child(3) {
+    transform: none; /* 回転を無効化 */
+    translate: none; /* 移動を無効化 */
 }
 
 .hamburger-menu.active span:nth-child(2) {
-    opacity: 0; /* 真ん中の線を非表示 */
-}
-
-.hamburger-menu.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(0.25rem, -0.25rem);
+    opacity: 1; /* 真ん中の線を非表示にしない */
 }
 
 /* main content */

@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
     hamburgerMenu.addEventListener("click", () => {
         navWrapper.classList.toggle("open");
         menuMask.classList.toggle("active");
-        hamburgerMenu.classList.toggle("active"); // ボタンの状態を切り替え
     });
 
     // メニューを閉じる
