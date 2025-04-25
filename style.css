@@ -273,6 +273,19 @@ footer {
     text-align: center; /* 説明文を中央揃え */
 }
 
+/* news-list styles */
+.news-list {
+    list-style: disc; /* リストマーカーをディスク型に設定 */
+    padding-left: 1.5rem; /* 左側の余白を追加 */
+    margin: 1rem 0; /* 上下の余白を設定 */
+}
+
+.news-list li {
+    margin-bottom: 0.5rem; /* 各リスト項目の間に余白を追加 */
+    font-size: 1rem; /* フォントサイズを調整 */
+    color: #333; /* テキスト色を設定 */
+}
+
 /* media query */
 @media (max-width: 768px) {
     .page-header {
