@@ -275,7 +275,6 @@ footer {
 
 /* news-list styles */
 .news-list {
-    list-style: disc; /* リストマーカーをディスク型に設定 */    a {
         font-size: 1.25rem; /* 適切なフォントサイズを設定 */
         text-decoration: none;
     }    a {
