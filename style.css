@@ -36,7 +36,7 @@ h3 {
     font-weight: bold; /* 太字に設定 */
 }
 a {
-    font-size: 1.25rem; /* 適切なフォントサイズを設定 */
+    font-size: 1rem; /* 適切なフォントサイズを設定 */
     text-decoration: none;
 }
 img, iframe {
@@ -275,7 +275,16 @@ footer {
 
 /* news-list styles */
 .news-list {
-    list-style: disc; /* リストマーカーをディスク型に設定 */
+    list-style: disc; /* リストマーカーをディスク型に設定 */    a {
+        font-size: 1.25rem; /* 適切なフォントサイズを設定 */
+        text-decoration: none;
+    }    a {
+        font-size: 1.25rem; /* 適切なフォントサイズを設定 */
+        text-decoration: none;
+    }    a {
+        font-size: 1.25rem; /* 適切なフォントサイズを設定 */
+        text-decoration: none;
+    }
     padding-left: 1.5rem; /* 左側の余白を追加 */
     margin: 1rem 0; /* 上下の余白を設定 */
 }
