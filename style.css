@@ -336,6 +336,46 @@ footer {
     display: none;
 }
 
+/* pamphlet styles */
+.pamphlet-container {
+    display: flex; /* 並列配置 */
+    align-items: center; /* 垂直方向に中央揃え */
+    justify-content: center; /* 水平方向に中央揃え */
+    gap: 1rem; /* ロゴとボタンの間に余白を追加 */
+    margin: 2rem 0; /* 上下の余白を追加 */
+}
+
+.pamphlet-logo {
+    max-width: 150px; /* ロゴの最大幅を設定 */
+    height: auto; /* アスペクト比を維持 */
+}
+
+.download-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #dc4542; /* ボタンの背景色 */
+    text-decoration: none; /* 下線を削除 */
+    border-radius: 5px; /* ボタンの角を丸くする */
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #b83734; /* ホバー時の背景色 */
+}
+
+.pamphlet-images {
+    display: flex;
+    flex-direction: column; /* 縦に並べる */
+    align-items: center; /* 中央揃え */
+}
+
+.pamphlet-page {
+    max-width: 80%; /* 画像の最大幅を設定 */
+    height: auto; /* アスペクト比を維持 */
+}
+
 /* media query */
 @media (max-width: 768px) {
     .page-header {
