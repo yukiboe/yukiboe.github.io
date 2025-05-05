@@ -336,6 +336,39 @@ footer {
     display: none;
 }
 
+/* goods styles */
+.item-container {
+    display: grid; /* グリッドレイアウトを有効にする */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* カラムの幅を設定 */
+    gap: 1rem; /* 各アイテム間の余白を設定 */
+    margin-top: 2rem; /* 上部に余白を追加 */
+}
+
+.item {
+    display: flex;
+    flex-direction: column; /* 縦並びにする */
+    align-items: center; /* 中央揃え */
+    gap: 0.5rem; /* 各要素間の余白を追加 */
+    padding: 1rem; /* アイテム全体に余白を追加 */
+    border: 1px solid #ccc; /* 枠線を追加 */
+    border-radius: 5px; /* 角を丸くする */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
+}
+
+.item img {
+    max-width: 100%; /* 親要素の幅に合わせる */
+    height: auto; /* アスペクト比を維持 */
+    max-height: 150px; /* 必要に応じて最大高さを設定 */
+    object-fit: contain; /* 画像を枠内に収める */
+}
+
+.item-description {
+    display: flex;
+    justify-content: space-between; /* 左右に要素を配置 */
+    width: 100%; /* 親要素の幅に合わせる */
+    text-align: center; /* テキストを中央揃え */
+}
+
 /* pamphlet styles */
 .pamphlet-container {
     display: flex; /* 並列配置 */
