@@ -200,6 +200,11 @@ footer {
     text-align: center; /* テキストを中央揃え */
 }
 
+.contact a {
+    color: white; /* 文字色を白に設定 */
+    text-decoration: underline
+}
+
 /* access セクションのスタイル */
 .access {
     flex: 1; /* 左右均等に幅を取る */
