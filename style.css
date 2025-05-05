@@ -400,8 +400,9 @@ footer {
     }
 
     .copyright-container {
-        flex-direction: column; /* 著作権部分を縦並びに変更 */
         gap: 0.5rem; /* 画像とテキストの間に余白を追加 */
+        flex-direction: row; /* 小さい画面でも並列を維持 */
+        flex-wrap: nowrap; /* 折り返しを防止 */
     }
 }
 
@@ -448,5 +449,7 @@ footer {
 
     .copyright-container {
         font-size: 0.8rem; /* 著作権部分のフォントサイズを縮小 */
+        flex-direction: row; /* 小さい画面でも並列を維持 */
+        flex-wrap: nowrap; /* 折り返しを防止 */
     }
 }
