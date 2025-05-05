@@ -39,4 +39,27 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         console.error("ヘッダーまたはmain要素が見つかりません。");
     }
+
+    const day1Btn = document.getElementById("day1-btn");
+    const day2Btn = document.getElementById("day2-btn");
+    const day1Img = document.getElementById("day1-img");
+    const day2Img = document.getElementById("day2-img");
+
+    day1Btn.addEventListener("click", () => {
+        day1Btn.classList.add("active");
+        day2Btn.classList.remove("active");
+        day1Img.classList.add("visible");
+        day1Img.classList.remove("hidden");
+        day2Img.classList.add("hidden");
+        day2Img.classList.remove("visible");
+    });
+
+    day2Btn.addEventListener("click", () => {
+        day2Btn.classList.add("active");
+        day1Btn.classList.remove("active");
+        day2Img.classList.add("visible");
+        day2Img.classList.remove("hidden");
+        day1Img.classList.add("hidden");
+        day1Img.classList.remove("visible");
+    });
 });

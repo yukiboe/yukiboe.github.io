@@ -299,6 +299,43 @@ footer {
     color: #333; /* テキスト色を設定 */
 }
 
+/* timetable buttons and images styles */
+.timetable-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.timetable-buttons button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #dc4542;
+    background-color: white;
+    color: #dc4542;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.timetable-buttons button.active {
+    background-color: #dc4542;
+    color: white;
+}
+
+.timetable-images img {
+    max-width: 100%;
+    height: auto;
+    display: none;
+}
+
+.timetable-images img.visible {
+    display: block;
+}
+
+.timetable-images img.hidden {
+    display: none;
+}
+
 /* media query */
 @media (max-width: 768px) {
     .page-header {
