@@ -197,6 +197,9 @@ footer {
 /* contact セクションのスタイル */
 .contact {
     flex: 1; /* 左右均等に幅を取る */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 子要素間の余白を設定 */
     text-align: center; /* テキストを中央揃え */
 }
 
