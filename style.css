@@ -359,6 +359,21 @@ footer {
     box-shadow: 0 4px 16px rgba(0,123,255,0.12);
 }
 
+/* 混雑状況（待ち時間）表示用 */
+.project-crowds{
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #dc4542; /* メインカラー */
+    border-radius: 16px;
+    padding: 2px 14px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 8px rgba(220,69,66,0.08);
+}
+
 /* timetable buttons and images styles */
 .timetable-buttons {
     display: flex;
