@@ -302,6 +302,63 @@ footer {
     color: #333; /* テキスト色を設定 */
 }
 
+/* floor buttons styles */
+.floor-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #dc4542;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.floor-btn.active {
+    background-color: #dc4542;
+    color: #fff;
+}
+
+/* floor-switcher全体を中央寄せ */
+.floor-switcher {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+}
+
+/* ボタンを中央に横並びで配置 */
+.floor-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+/* ボタンの見た目 */
+.floor-btn {
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #dc4542;
+    background: #fff;
+    border: 2px solid #dc4542;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.floor-btn.active {
+    background: #dc4542;
+    color: #fff;
+    border-color: #dc4542;
+    box-shadow: 0 4px 16px rgba(0,123,255,0.12);
+}
+
 /* timetable buttons and images styles */
 .timetable-buttons {
     display: flex;
@@ -410,6 +467,60 @@ footer {
 .pamphlet-page {
     max-width: 80%; /* 画像の最大幅を設定 */
     height: auto; /* アスペクト比を維持 */
+}
+
+/* 企画一覧を横並び・折り返し */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    margin: 24px 0;
+}
+
+/* 企画カードのデザイン */
+.project-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 20px;
+    max-width: 420px;
+    min-width: 320px;
+    gap: 18px;
+}
+
+/* 企画画像 */
+.project-image {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #eee;
+}
+
+/* 企画情報 */
+.project-info {
+    flex: 1;
+}
+
+.project-title {
+    font-size: 1.2em;
+    margin: 0 0 8px 0;
+    color: #dc4542;
+}
+
+.project-place {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.project-desc {
+    font-size: 0.98em;
+    color: #222;
 }
 
 /* media query */
