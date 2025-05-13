@@ -204,9 +204,12 @@
                     document.getElementById(`floor-${floor}`).style.display = 'block';
                 });
             });
-            // 初期状態で1階ボタンをactiveに
+            // 初期状態で1階ボタンをactiveにし、1階のみ表示
+            document.querySelectorAll('.floor-content').forEach(content => {
+                content.style.display = 'none';
+            });
+            document.getElementById('floor-1').style.display = 'block';
             document.querySelector('.floor-btn[data-floor="1"]').classList.add('active');
         </script>
     </body>
 </html>
-``` 
