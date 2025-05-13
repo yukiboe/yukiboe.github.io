@@ -46,22 +46,9 @@
                     <a href="pamphlet/13thtogensaipamphlet.pdf" download class="download-button">ダウンロード</a>
                 </div>
                 <div class="pamphlet-images">
-                    <img src="pamphlet/pamphlet01.jpg" alt="パンフレット1ページ目" class="pamphlet-page">
-                    <img src="pamphlet/pamphlet02.jpg" alt="パンフレット2ページ目" class="pamphlet-page">
-                    <img src="pamphlet/pamphlet03.jpg" alt="パンフレット3ページ目" class="pamphlet-page">
-                    <img src="pamphlet/pamphlet04.jpg" alt="パンフレット4ページ目" class="pamphlet-page">
-                    <img src="pamphlet/pamphlet05.jpg" alt="パンフレット5ページ目" class="pamphlet-page">
-                    <img src="pamphlet/pamphlet06.jpg" alt="パンフレット6ページ目" class="pamphlet-page">
-                    <img src="pamphlet/pamphlet07.jpg" alt="パンフレット7ページ目" class="pamphlet-page">
-                    <img src="pamphlet/pamphlet08.jpg" alt="パンフレット8ページ目" class="pamphlet-page">
-                    <img src="pamphlet/pamphlet09.jpg" alt="パンフレット9ページ目" class="pamphlet-page">
-                    <img src="pamphlet/pamphlet10.jpg" alt="パンフレット10ページ目" class="pamphlet-page">
-                    <img src="pamphlet/pamphlet11.jpg" alt="パンフレット11ページ目" class="pamphlet-page">
-                    <img src="pamphlet/pamphlet12.jpg" alt="パンフレット12ページ目" class="pamphlet-page">
-                    <img src="pamphlet/pamphlet13.jpg" alt="パンフレット13ページ目" class="pamphlet-page">
-                    <img src="pamphlet/pamphlet14.jpg" alt="パンフレット14ページ目" class="pamphlet-page">
-                    <img src="pamphlet/pamphlet15.jpg" alt="パンフレット15ページ目" class="pamphlet-page">
-                    <img src="pamphlet/pamphlet16.jpg" alt="パンフレット16ページ目" class="pamphlet-page">
+                    <button class="prev-button nav-btn" aria-label="前のページ">&#60;</button>
+                    <img id="pamphlet-page" src="pamphlet/pamphlet01.jpg" alt="パンフレット1ページ目" class="pamphlet-page">
+                    <button class="next-button nav-btn" aria-label="次のページ">&#62;</button>
                 </div>
             </section>
         </main>
@@ -86,6 +73,50 @@
                 <p><small>&copy; 2025 兎原祭実行委員会</small></p>
             </div>
         </footer>
+        <script>
+            const images = [
+                "pamphlet/pamphlet01.jpg",
+                "pamphlet/pamphlet02.jpg",
+                "pamphlet/pamphlet03.jpg",
+                "pamphlet/pamphlet04.jpg",
+                "pamphlet/pamphlet05.jpg",
+                "pamphlet/pamphlet06.jpg",
+                "pamphlet/pamphlet07.jpg",
+                "pamphlet/pamphlet08.jpg",
+                "pamphlet/pamphlet09.jpg",
+                "pamphlet/pamphlet10.jpg",
+                "pamphlet/pamphlet11.jpg",
+                "pamphlet/pamphlet12.jpg",
+                "pamphlet/pamphlet13.jpg",
+                "pamphlet/pamphlet14.jpg",
+                "pamphlet/pamphlet15.jpg",
+                "pamphlet/pamphlet16.jpg"
+            ];
+            let current = 0;
+            const img = document.getElementById('pamphlet-page');
+            const prevBtn = document.querySelector('.prev-button');
+            const nextBtn = document.querySelector('.next-button');
+
+            function updateImage() {
+                img.src = images[current];
+                img.alt = `パンフレット${current + 1}ページ目`;
+            }
+
+            prevBtn.addEventListener('click', () => {
+                if (current > 0) {
+                    current--;
+                    updateImage();
+                }
+            });
+
+            nextBtn.addEventListener('click', () => {
+                if (current < images.length - 1) {
+                    current++;
+                    updateImage();
+                }
+            });
+        </script>
         <script src="script.js"></script>
     </body>
 </html>
+``` 

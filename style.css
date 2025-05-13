@@ -484,6 +484,37 @@ footer {
     height: auto; /* アスペクト比を維持 */
 }
 
+/* パンフレット画像スライダー用 */
+.pamphlet-images {
+    display: flex;
+    flex-direction: row; /* 横並びに変更 */
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+.pamphlet-page {
+    max-width: 100vw;
+    max-height: 100vh;
+    border-radius: 8px;
+}
+.nav-btn {
+    background: #fff;
+    color: #dc4542;
+    border: 2px solid #dc4542;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* 企画一覧を横並び・折り返し */
 .project-list {
     display: flex;
