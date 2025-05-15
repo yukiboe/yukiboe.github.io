@@ -281,51 +281,6 @@ footer {
     text-align: center; /* 説明文を中央揃え */
 }
 
-/* stageeventカード一覧 */
-.stageevent-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 32px;
-    justify-content: center;
-    margin: 24px 0;
-}
-.stageevent-card {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    padding: 20px;
-    max-width: 420px;
-    min-width: 320px;
-    gap: 18px;
-}
-.stageevent-image {
-    width: 120px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-    background: #eee;
-}
-.stageevent-info {
-    flex: 1;
-}
-.stageevent-title {
-    font-size: 1.2em;
-    margin: 0 0 8px 0;
-    color: #dc4542;
-}
-.stageevent-time {
-    font-size: 0.95em;
-    color: #555;
-    margin-bottom: 8px;
-}
-.stageevent-desc {
-    font-size: 0.98em;
-    color: #222;
-}
-
 /* news-list styles */
 .news-list {
         font-size: 1.25rem; /* 適切なフォントサイズを設定 */
