@@ -1,770 +1,105 @@
 @charset "UTF-8";
 
-/* general styles */
+
+/* 基本設定 */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* パディングやボーダーを含めた幅計算 */
+    box-sizing: border-box;
 }
-html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* 横スクロールを無効化 */
-}
-html {
-    font-size: 100%; /* 基準フォントサイズ */
-}
+
 body {
-    font-family: "Yu Gothic Medium", YuGothic, sans-serif;
-    line-height: 1.7;
-    color: black;
-}
-h1 {
-    font-size: 4rem; /* 適切なフォントサイズを設定 */
-    font-family: "Almendra", serif;
-    font-weight: bold; /* 太字に設定 */
-    color: #dc4542;
-}
-h2 {
-    font-size: 1.5rem; /* 適切なフォントサイズを設定 */
-    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
-    font-weight: bold; /* 太字に設定 */
-}
-h3 {
-    font-size: 0.75rem; /* 適切なフォントサイズを設定 */
-    font-family: "Almendra", serif;
-    font-weight: bold; /* 太字に設定 */
-}
-a {
-    font-size: 1rem; /* 適切なフォントサイズを設定 */
-    text-decoration: none;
-}
-img, iframe {
-    max-width: 100%; /* 親要素の幅に収める */
-    height: auto; /* アスペクト比を維持 */
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background-color: #ffffff; /* わずかに青みのある白で清潔感を */
 }
 
-/* header styles */
-.headerlogo {
-    height: 50px; /* ロゴの高さを固定 */
-    width: auto; /* アスペクト比を維持して幅を自動調整 */
-    margin-top: 0; /* 上部の余白を削除または調整 */
-    margin-bottom: 0; /* 下部の余白を削除または調整 */
-}
-.page-header {
-    height: auto; /* 高さを自動調整 */
-    padding: 0.5rem 0; /* 上下の余白を調整 */
-    display: flex; /* Flexboxを使用して子要素を配置 */
-    align-items: center; /* 子要素を垂直方向に中央揃え */
-    justify-content: space-between; /* ロゴとナビゲーションを左右に配置 */
-    max-width: 90%; /* 横幅を最大90%に制限 */
-    margin: 0 auto; /* ヘッダー全体を中央に配置 */
-    background-color: #fff; /* 背景色を白に設定 */
-    position: fixed; /* ヘッダーを固定 */
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000; /* 他の要素より前面に表示 */
-}
-
-/* navigation styles */
-.nav {
+/* メインビジュアル：IMG_0458.jpg を使用 */
+.main-visual {
+    height: 70vh; /* 少し高めにして空をしっかり見せる */
+    background: linear-gradient(rgba(175, 169, 224, 0.2), rgba(147, 134, 195, 0.3)), 
+                url('../IMG_0458.jpg'); /* フォルダ構成に合わせてパスを調整してください */
+    background-size: cover;
+    background-position: center 60%; /* 校舎と空のバランスが良い位置に調整 */
     display: flex;
-    font-size: 1rem; /* フォントサイズを相対単位で設定 */
-    text-transform: uppercase;
-    list-style: none; /* リストボタンを消す */
-    margin: 0;
-    padding: 0;
-}
-.nav li {
-    margin-left: 2rem; /* リスト項目間の余白を設定 */
-}
-.nav a {
-    color: black;
-}
-
-/* navigation wrapper */
-.nav-wrapper {
-    display: flex;
-    flex-direction: row;
-}
-
-.menu-mask {
-    display: none;
-}
-
-/* hamburger-memu */
-.hamburger-menu {
-    display: none;
     flex-direction: column;
-    justify-content: space-between;
-    width: 2rem;
-    height: 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    z-index: 1100;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
 }
 
-/* ハンバーガーボタンの通常状態 */
-.hamburger-menu span {
+.main-visual-title {
+    font-size: clamp(2.5rem, 8vw, 4rem); /* 画面幅に合わせてサイズが可変 */
+    font-weight: bold;
+    color: #0724dc; 
+    letter-spacing: 0.15em;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    margin-bottom: 15px;
+}
+
+.main-visual-subtitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.9);
+    color: #0077b6; /* 青空に合わせた爽やかな青 */
+    padding: 8px 25px;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* メインコンテンツ */
+.main-content {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.main-content-title {
+    font-size: 1.8rem;
+    color: #0077b6;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+/* タイトルの下の装飾（波打つようなライン） */
+.main-content-title::after {
+    content: "";
     display: block;
     width: 100%;
-    height: 0.25rem;
-    background-color: black;
-    border-radius: 0.125rem;
-    transition: transform 0.3s, opacity 0.3s;
+    height: 6px;
+    background: linear-gradient(to right, #00b4d8, transparent);
+    margin-top: 8px;
+    border-radius: 3px;
 }
 
-/* ハンバーガーボタンがアクティブ（✖印）になったときのスタイルを削除 */
-.hamburger-menu.active span:nth-child(1),
-.hamburger-menu.active span:nth-child(3) {
-    transform: none; /* 回転を無効化 */
-    translate: none; /* 移動を無効化 */
-}
-
-.hamburger-menu.active span:nth-child(2) {
-    opacity: 1; /* 真ん中の線を非表示にしない */
-}
-
-/* main content */
-section {
-    margin-bottom: 2rem; /* 各セクションの下に余白を追加 */
-}
-.headline {
-    display: inline-block; /* 背景色を文字の幅に合わせる */
-    background-color: #dc4542; /* 背景色を設定 */
-    color: #ffffff; /* 文字色を白に設定 */
-    padding: 0.2rem 0.5rem; /* 内側の余白を設定 */
-    font-size: 1.5rem; /* フォントサイズを調整 */
-    font-weight: bold; /* 太字に設定 */
-    position: relative; /* 子要素の位置を制御 */
-    clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%); /* 花びら型の切れ込みを作成 */
-}
-.wrapper {
-    max-width: 100%; /* 最大幅を画面幅に制限 */
-    margin: 0; /* 中央揃え */
-    padding: 0; /* 内側の余白を調整 */
-    box-sizing: border-box; /* パディングを含めた幅計算 */
-}
-main {
-    margin-top: 0; /* 初期値を設定 */
-    transition: margin-top 0.3s; /* スムーズな移動を追加 */
-}
-
-/* main styles */
-.main {
-    max-width: 90%; /* 横幅を最大90%に制限 */
-    margin: 0 auto; /* 中央に配置 */
-    padding: 1rem; /* 内側に余白を追加 */
-    box-sizing: border-box; /* ボックスモデルを統一 */
-}
-
-/* access map styles */
-.access-map iframe {
-    width: 100%; /* 親要素の幅に合わせる */
-    height: auto; /* 高さを自動調整 */
-    aspect-ratio: 16 / 9; /* アスペクト比を維持 */
-    margin: 0;
-    padding: 0;
-    border: 0; /* 枠線を削除 */
-}
-
-/* footer styles */
-footer {
-    text-align: center;
-    background-color: #dc4542; /* 背景色を薄いグレーに設定 */
-    padding: 1rem 0;
-    color: #ffffff;
-    font-size: 0.9rem;
-    border-top: 1px solid #ddd;
-}
-
-/* フッター全体のスタイル */
-.footer-container {
-    display: flex; /* Flexboxを使用して左右に分割 */
-    justify-content: space-between; /* 子要素を左右に配置 */
-    align-items: center; /* 子要素を中央揃え */
-    padding: 1rem; /* 内側の余白を設定 */
-    background-color: #dc4542; /* 背景色を設定 */
-    color: #ffffff; /* テキスト色を白に設定 */
-    flex-wrap: wrap; /* 必要に応じて折り返し */
-}
-
-/* contact セクションのスタイル */
-.contact {
-    flex: 1; /* 左右均等に幅を取る */
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* 子要素間の余白を設定 */
-    text-align: center; /* テキストを中央揃え */
-}
-
-.contact a {
-    color: white; /* 文字色を白に設定 */
-    text-decoration: underline
-}
-
-/* access セクションのスタイル */
-.access {
-    flex: 1; /* 左右均等に幅を取る */
-    text-align: center; /* テキストを中央揃え */
-}
-
-/* iframe のスタイル */
-.access iframe {
-    margin-top: 0.5rem; /* 上部に余白を追加 */
-    max-width: 100%; /* 親要素の幅に収める */
-    height: auto; /* 高さを自動調整 */
-    aspect-ratio: 16 / 9; /* アスペクト比を維持 */
-}
-
-/* フッター内のコンテンツを横並びにする */
-.copyright-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem; /* 画像とテキストの間に余白を追加 */
-    border-top: 2px solid #fff; /* 上部に白い線を追加 */
-    padding-top: 1rem; /* 線とコンテンツの間に余白を追加 */
-}
-
-/* フッターのテキスト部分 */
-.footer-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-}
-
-/* フッターのテキスト部分のスタイル */
-.access {
-    text-align: center; /* テキストを中央揃え */
-    display: flex; /* フレックスボックスを使用 */
-    flex-direction: column; /* 縦方向に配置 */
-    align-items: center; /* 子要素を中央揃え */
-    gap: 0.5rem; /* 子要素間の余白を設定 */
-}
-
-/* フッターのロゴ画像 */
-.footer-logo {
-    width: 40px; /* ロゴの幅を適切に調整 */
-    height: auto; /* アスペクト比を維持 */
-}
-
-/* concept-container のスタイル */
-.concept-container {
-    display: flex;
-    flex-wrap: wrap; /* 必要に応じて折り返し */
-    align-items: center;
-    justify-content: center; /* 要素を中央揃え */
-    gap: 2rem; /* 要素間の余白を調整 */
-    max-width: 1200px; /* コンテナの最大幅を設定 */
-    margin: 0 auto; /* コンテナ自体を中央揃え */
-    padding: 0 1rem; /* 左右に余白を追加して中央揃えを補助 */
-}
-
-/* concept-logo のスタイル */
-.concept-logo {
-    flex: 1; /* 横並び時に均等に幅を取る */
-    max-width: 300px; /* ロゴの最大幅を設定 */
-    text-align: center; /* ロゴを中央揃え */
-}
-
-/* concept-explanation のスタイル */
-.concept-explanation {
-    flex: 1; /* 横並び時に均等に幅を取る */
-    max-width: 600px; /* 説明部分の最大幅を設定 */
-    text-align: center; /* 説明文を中央揃え */
-}
-
-/* stageeventカード一覧 */
-.stageevent-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 32px;
-    justify-content: center;
-    margin: 24px 0;
-}
-.stageevent-card {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    padding: 20px;
-    max-width: 420px;
-    min-width: 320px;
-    gap: 18px;
-}
-.stageevent-image {
-    width: 120px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-    background: #eee;
-}
-.stageevent-info {
-    flex: 1;
-}
-.stageevent-title {
-    font-size: 1.2em;
-    margin: 0 0 8px 0;
-    color: #dc4542;
-}
-.stageevent-time {
-    font-size: 0.95em;
-    color: #555;
-    margin-bottom: 8px;
-}
-.stageevent-desc {
-    font-size: 0.98em;
-    color: #222;
-}
-
-/* news-list styles */
-.news-list {
-        font-size: 1.25rem; /* 適切なフォントサイズを設定 */
-        text-decoration: none;
-    }    a {
-        font-size: 1.25rem; /* 適切なフォントサイズを設定 */
-        text-decoration: none;
-    }    a {
-        font-size: 1.25rem; /* 適切なフォントサイズを設定 */
-        text-decoration: none;
-    }
-    padding-left: 1.5rem; /* 左側の余白を追加 */
-    margin: 1rem 0; /* 上下の余白を設定 */
-}
-
-.news-list li {
-    margin-bottom: 0.5rem; /* 各リスト項目の間に余白を追加 */
-    font-size: 1rem; /* フォントサイズを調整 */
-    color: #333; /* テキスト色を設定 */
-}
-
-/* floor buttons styles */
-.floor-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #dc4542;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.floor-btn.active {
-    background-color: #dc4542;
-    color: #fff;
-}
-
-/* floor-switcher全体を中央寄せ */
-.floor-switcher {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 40px 0;
-}
-
-/* ボタンを中央に横並びで配置 */
-.floor-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin-bottom: 24px;
-}
-
-/* ボタンの見た目 */
-.floor-btn {
-    padding: 12px 28px;
+.main-content-text {
     font-size: 1.1rem;
-    font-weight: bold;
-    color: #dc4542;
-    background: #fff;
-    border: 2px solid #dc4542;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-}
-
-.floor-btn.active {
-    background: #dc4542;
-    color: #fff;
-    border-color: #dc4542;
-    box-shadow: 0 4px 16px rgba(0,123,255,0.12);
-}
-
-/* 混雑状況（待ち時間）表示用 */
-.project-crowds{
-    display: inline-block;
-    font-size: 1em;
-    font-weight: bold;
-    color: #fff;
-    background-color: #dc4542; /* メインカラー */
-    border-radius: 16px;
-    padding: 2px 14px;
-    margin-bottom: 8px;
-    margin-right: 8px;
-    letter-spacing: 0.05em;
-    box-shadow: 0 2px 8px rgba(220,69,66,0.08);
-}
-
-/* timetable buttons and images styles */
-.timetable-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin: 1rem 0;
-}
-
-.timetable-buttons button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border: 1px solid #dc4542;
-    background-color: white;
-    color: #dc4542;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.timetable-buttons button.active {
-    background-color: #dc4542;
-    color: white;
-}
-
-.timetable-images img {
-    max-width: 100%;
-    height: auto;
-    display: none;
-}
-
-.timetable-images img.visible {
-    display: block;
-}
-
-.timetable-images img.hidden {
-    display: none;
-}
-
-/* goods styles */
-.item-container {
-    display: grid; /* グリッドレイアウトを有効にする */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* カラムの幅を設定 */
-    gap: 1rem; /* 各アイテム間の余白を設定 */
-    margin-top: 2rem; /* 上部に余白を追加 */
-}
-
-.item {
-    display: flex;
-    flex-direction: column; /* 縦並びにする */
-    align-items: center; /* 中央揃え */
-    gap: 0.5rem; /* 各要素間の余白を追加 */
-    padding: 1rem; /* アイテム全体に余白を追加 */
-    border: 1px solid #ccc; /* 枠線を追加 */
-    border-radius: 5px; /* 角を丸くする */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
-}
-
-.item img {
-    max-width: 100%; /* 親要素の幅に合わせる */
-    height: auto; /* アスペクト比を維持 */
-    max-height: 150px; /* 必要に応じて最大高さを設定 */
-    object-fit: contain; /* 画像を枠内に収める */
-}
-
-.item-description {
-    display: flex;
-    justify-content: space-between; /* 左右に要素を配置 */
-    width: 100%; /* 親要素の幅に合わせる */
-    text-align: center; /* テキストを中央揃え */
-}
-
-/* pamphlet styles */
-.pamphlet-container {
-    display: flex; /* 並列配置 */
-    align-items: center; /* 垂直方向に中央揃え */
-    justify-content: center; /* 水平方向に中央揃え */
-    gap: 1rem; /* ロゴとボタンの間に余白を追加 */
-    margin: 2rem 0; /* 上下の余白を追加 */
-}
-
-.pamphlet-logo {
-    max-width: 150px; /* ロゴの最大幅を設定 */
-    height: auto; /* アスペクト比を維持 */
-}
-
-.download-button {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    color: white;
-    background-color: #dc4542; /* ボタンの背景色 */
-    text-decoration: none; /* 下線を削除 */
-    border-radius: 5px; /* ボタンの角を丸くする */
-    transition: background-color 0.3s;
-}
-
-.download-button:hover {
-    background-color: #b83734; /* ホバー時の背景色 */
-}
-
-.pamphlet-images {
-    display: flex;
-    flex-direction: column; /* 縦に並べる */
-    align-items: center; /* 中央揃え */
-}
-
-.pamphlet-page {
-    max-width: 80%; /* 画像の最大幅を設定 */
-    height: auto; /* アスペクト比を維持 */
-}
-
-/* パンフレット画像スライダー用 */
-.pamphlet-images {
-    display: flex;
-    flex-direction: row; /* 横並びに変更 */
-    align-items: center;
-    justify-content: center;
-    gap: 0;
-    margin: 2rem 0;
-}
-.pamphlet-page {
-    max-width: 80vw;
-    max-height: 80vh;
-    border-radius: 8px;
-}
-.nav-btn {
-    background: #fff;
-    color: #dc4542;
-    border: 2px solid #dc4542;
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
-    font-size: 2rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* 企画一覧を横並び・折り返し */
-.project-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 32px;
-    justify-content: center;
-    margin: 24px 0;
-}
-
-/* 企画カードのデザイン */
-.project-card {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    padding: 20px;
-    max-width: 420px;
-    min-width: 320px;
-    gap: 18px;
-}
-
-/* 企画画像 */
-.project-image {
-    width: 120px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-    background: #eee;
-}
-
-/* 企画情報 */
-.project-info {
-    flex: 1;
-}
-
-.project-title {
-    font-size: 1.2em;
-    margin: 0 0 8px 0;
-    color: #dc4542;
-}
-
-.project-place {
-    font-size: 0.95em;
     color: #555;
-    margin-bottom: 8px;
 }
 
-.project-desc {
-    font-size: 0.98em;
-    color: #222;
-}
-
-/* media query */
+/* スマホ対応 */
 @media (max-width: 768px) {
-    .page-header {
-        flex-direction: column; /* ヘッダーを縦並びに変更 */
-        align-items: flex-start;
-        padding: 1rem; /* 内側余白を調整 */
+    .main-visual{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .main-visual-title {
+        font-size: 33px;
     }
 
-    .headerlogo {
-        height: 50px; /* 高さを固定 */
-        width: auto; /* アスペクト比を維持して幅を自動調整 */
-        max-width: none; /* 幅に制限を加えない */
+    .main-visual-subtitle  {
+        font-size: 15px;
     }
 
-    .nav {
-        flex-direction: column; /* ナビゲーションを縦並びに変更 */
-        gap: 1rem; /* 項目間の余白を設定 */
+    .main-visual {
+        height: 50vh;
     }
-
-    .nav li {
-        margin-left: 0; /* 左余白を削除 */
-    }
-
-    main {
-        margin-top: 8rem; /* ヘッダーの高さ分の余白を調整 */
-    }
-
-    .access-map iframe {
-        aspect-ratio: 4 / 3; /* タブレットサイズでアスペクト比を変更 */
-    }
-
-    .hamburger-menu {
-        display: flex;
-    }
-
-    .nav-wrapper {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        flex-direction: column;
-        width: 70%;
-        height: 100%;
-        background-color: white;
-        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-        transition: right 0.3s;
-        z-index: 1000;
-    }
-
-    .nav-wrapper.open {
-        right: 0;
-    }
-
-    .menu-mask {
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 900;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s, visibility 0.3s;
-    }
-
-    .menu-mask.active {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .concept-container {
-        flex-direction: column; /* 縦並びに変更 */
-        text-align: center; /* スマホでは中央揃え */
-    }
-
-    .concept-logo,
-    .concept-explanation {
-        flex: unset; /* 幅の制約を解除 */
-        max-width: 100%; /* 幅を親要素に合わせる */
-    }
-
-    .footer-container {
-        flex-direction: column; /* フッターを縦並びに変更 */
-        align-items: center; /* 子要素を中央揃え */
-        gap: 1rem; /* 子要素間の余白を追加 */
-    }
-
-    .contact,
-    .access {
-        flex: unset; /* 均等幅を解除 */
-        width: 100%; /* 幅を100%に設定 */
-        text-align: center; /* テキストを中央揃え */
-    }
-
-    .access iframe {
-        width: 90%; /* 地図の幅を縮小 */
-        margin: 0 auto; /* 地図を中央揃え */
-    }
-
-    .copyright-container {
-        gap: 0.5rem; /* 画像とテキストの間に余白を追加 */
-        flex-direction: row; /* 小さい画面でも並列を維持 */
-        flex-wrap: nowrap; /* 折り返しを防止 */
-    }
-}
-
-@media (max-width: 480px) {
-    html {
-        font-size: 90%; /* スマホ用にフォントサイズを縮小 */
-    }
-
-    .page-header {
-        padding: 0.5rem 1rem; /* 内側余白をさらに調整 */
-    }
-
-    .headerlogo {
-        height: 40px; /* 高さを固定 */
-        width: auto; /* アスペクト比を維持して幅を自動調整 */
-        max-width: none; /* 幅に制限を加えない */
-    }
-
-    .nav {
-        font-size: 0.9rem; /* ナビゲーションのフォントサイズを縮小 */
-    }
-
-    .wrapper {
-        padding: 1rem 0; /* 上下の余白を調整 */
-    }
-
-    .access-map iframe {
-        aspect-ratio: 1 / 1; /* スマホサイズで正方形に近い比率に変更 */
-    }
-
-    .footer-container {
-        padding: 1rem; /* 内側の余白を調整 */
-    }
-
-    .contact,
-    .access {
-        font-size: 0.9rem; /* テキストサイズを縮小 */
-    }
-
-    .access iframe {
-        width: 100%; /* 地図の幅を親要素に合わせる */
-        aspect-ratio: 1 / 1; /* 正方形に近い比率に変更 */
-    }
-
-    .copyright-container {
-        font-size: 0.8rem; /* 著作権部分のフォントサイズを縮小 */
-        flex-direction: row; /* 小さい画面でも並列を維持 */
-        flex-wrap: nowrap; /* 折り返しを防止 */
+    .main-content {
+        margin: 50px auto;
     }
 }
