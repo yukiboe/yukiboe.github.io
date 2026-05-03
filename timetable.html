@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>第14回兎原祭</title>
+    <meta name="description" content="兎原祭の公式サイトです。">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./js/toggle-menu.js"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/timetable.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-inner">
+            <a class="header-logo" href="./index.html" >
+                <img src="images/無題43_0030-12-25_20260404202725.png" alt="兎原祭のロゴ">
+            </a>
+            <button class="toggle-menu-button" aria-label="メニューを開閉"></button>
+            <div class="header-site-menu">
+                <nav class="site-menu">
+                    <ul>
+                        <li class="menu" data-menu="kikaku">
+                            <p class="menu-trigger">企画</p>                  
+                            <ul class="child_menu">
+                                <li><a href="./map.html">マップ</a></li>
+                                <li><a href="./timetable.html">タイムテーブル</a></li>
+                                <li><a href="./kikaku.html">企画一覧</a></li>
+                                <li><a href="./syokuhan.html">食販情報</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="menu" data-menu="about">
+                            <p class="menu-trigger">兎原祭について</p>
+                            <ul class="child_menu">
+                                <li><a href="./abouttogensai.html">兎原祭とは</a></li>
+                                <li><a href="./goods.html">グッズ情報</a></li>
+                                <li><a href="./interview.html">実行委員長インタビュー</a></li>
+                                <li><a href="./tfpt.html">実行委員会紹介</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="menu" data-menu="pamphlet">
+                            <p class="menu-trigger">パンフレット</p>
+                            <ul class="child_menu">
+                                <li><a href="./pamphlet.html">パンフレット</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="menu" data-menu="access">
+                            <p class="menu-trigger">アクセス</p>
+                            <ul class="child_menu">
+                                <li><a href="./access.html">本校への行き方</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+            
+        <div class="title">
+            <h1>タイムテーブル</h1>
+        </div>
+
+
+        <div class="stage-container">
+<div class="day-selector tab-menu" style="margin-bottom: 10px;">
+        <button class="tab-btn active" id="btn-day1" onclick="switchDay(1)">1日目 (5/15)</button>
+        <button class="tab-btn" id="btn-day2" onclick="switchDay(2)">2日目 (5/16)</button>
+    </div>
+
+    <div class="tab-menu">
+        <button class="tab-btn active" onclick="switchVenue('music-room')">音楽室</button>
+        <button class="tab-btn" onclick="switchVenue('outdoor')">屋外ステージ</button>
+        <button class="tab-btn" onclick="switchVenue('arena')">第1アリーナ</button>
+    </div>
+
+    <div id="now-playing" class="card">
+        <div class="label" id="current-venue-label">読み込み中...</div>
+        <h2 id="current-title">---</h2>
+        <div class="time-range" id="current-time-range">--:-- - --:--</div>
+        <div class="progress-bar-container">
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
+    </div>
+
+    <div class="table-section">
+        <table id="full-timetable">
+            <thead>
+                <tr>
+                    <th>時間</th>
+                    <th>団体名</th>
+                    <th>状況</th>
+                </tr>
+            </thead>
+            <tbody id="timetable-body">
+                </tbody>
+        </table>
+    </div>
+</div>
+
+
+    </main>
+    <footer class="footer">
+         
+         <a class="footer-logo" href="./index.html">
+             <img src="images/togensailogo.jpeg" alt="兎原祭ロゴ" >
+         </a>
+         <div class="footer-sns-icons">
+            <a href="https://www.instagram.com/ku_secondary_kouhou/" aria-label="Instagram">IG</a>
+            <a href="https://x.com/KU_Secondary" aria-label="X">X</a>
+            <a href="https://www.edu.kobe-u.ac.jp/kuss-top/" aria-label="School Website">HP</a>
+        </div>
+            <p class="copyright">© 2026 兎原祭実行委員会</p>
+    </footer>
+</body>
+</html>
