@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+
+.title {
+    height: auto;
+    min-height: 150px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 60px 20px 20px;
+}
+
+
+
+
+/* コンテンツ全体のコンテナ */
+.syokuhan-contents {
+    width: 100%;
+    max-width: 1080px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* リストの設定 */
+.syokuhan-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    /* 商品カードの最小幅を設定。画面に合わせて自動で列数が変わります */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+/* 商品カード */
+.syokuhan-list li {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+/* 【重要】元の比率を維持して見切れさせない設定 */
+.syokuhan-list a {
+    display: block;
+    text-decoration: none;
+}
+
+.syokuhan-list img {
+    width: 100%;           /* 横幅をカードいっぱいに広げる */
+    height: auto;          /* ★高さを自動にすることで元の比率を維持 */
+    display: block;        /* 下の隙間を消す */
+    object-fit: contain;   /* 念のための保険 */
+    border-radius: 8px;    /* お好みで角丸に */
+}
+
+/* 商品情報 */
+.syokuhan-list dl {
+    margin: 15px 0 0;
+    padding: 0;
+}
+
+.syokuhan-list dt {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.syokuhan-list dd {
+    margin: 5px 0 0;
+    font-size: 1.2rem;
+    color: #e63946;
+    font-weight: bold;
+}
+
+/* 販売状況 */
+.when {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* --- レスポンシブ（スマホ） --- */
+@media (max-width: 500px) {
+
+
+    .title {
+    font-size: 20px;
+}
+
+
+
+    .syokuhan-list {
+        /* スマホで2列にする場合はここを140px程度に、1列なら200px以上に */
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 20px;
+    }
+    
+    .syokuhan-list dt {
+        font-size: 0.95rem;
+    }
+    
+    .syokuhan-list dd {
+        font-size: 1rem;
+    }
+}

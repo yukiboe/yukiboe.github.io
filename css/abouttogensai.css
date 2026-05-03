@@ -1,0 +1,288 @@
+@charset "UTF-8";
+
+.title {
+    height: 310px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 42px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+
+.seisyunn {
+    position: relative;
+    padding: 1rem 1rem 1rem 1.5rem;
+    border-radius: 5px;
+    border: 3px solid #333;
+    box-shadow: -3px 3px 0 0 #333;
+    font-weight: bold;
+    font-size: 60px;
+    width: 60%;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+.seisyunn:before,
+.seisyunn:after {
+    position: absolute;
+    left: 200px;
+    height: 0;
+    width: 0;
+    border: solid transparent;
+    content: "";
+}
+
+.seisyunn:before {
+    top: 100%;
+    margin-left: -12px;
+    border-color: transparent;
+    border-top-color: #333;
+    border-right-color: #333;
+    border-width: 10px;
+}
+
+.seisyunn:after {
+    top: 99%;
+    margin-left: -7px;
+    border-color: transparent;
+    border-top-color: #ffffff;
+    border-right-color: #ffffff;
+    border-width: 6.5px;
+}
+
+
+.about-image {
+    /* 中央配置のための基本設定 */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* デザインの調整 */
+    max-width: 250px; /* サイズはお好みで */
+    height: auto;
+
+}
+
+.hitokoto {
+    margin-left: 120px;
+}
+
+.ppp {
+    font-size: 26px;
+    margin-left: 160px;
+    margin-right: 160px;
+}
+
+.history-title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.history {
+    display: flex;
+    /* 1. 上下を真ん中に揃える */
+    align-items: center; 
+    
+    /* 2. 左右の余白を均等に（画像とテキストを囲いの端から等間隔に） */
+    justify-content: space-around; 
+
+    width: 930px;
+    max-width: 95%;
+    margin: 50px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0f0f0;
+    box-sizing: border-box; /* パディングを含めて幅を計算 */
+}
+
+/* 画像の設定 */
+.history img {
+    height: 240px; 
+    width: auto;
+    max-width: 40%; /* 少し余裕を持たせる */
+    object-fit: contain;
+    border-radius: 12px;
+    flex-shrink: 0; /* 画像が潰れないように固定 */
+}
+
+/* テキスト部分の調整 */
+.history-text {
+    /* 固定幅ではなく、内容に応じた幅にしつつ最大を制限 */
+    max-width: 450px; 
+    /* 左右の margin をリセット（space-aroundで制御するため） */
+    margin: 0; 
+    /* テキスト自体も中央寄せにしたい場合は以下を追加（お好みで） */
+    /* text-align: center; */
+}
+
+/* 反転（reverse）の時も、space-aroundなら自動で位置が整います */
+.history.reverse {
+    flex-direction: row-reverse;
+}
+
+/* 回数（第〇回）の装飾 */
+.history-text h3 {
+    font-size: 24px;
+    color: #333;
+    border-bottom: 2px solid #ffcc00; /* 神大カラーやアクセント色を引く */
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+.history.reverse {
+    flex-direction: row-reverse;
+}
+
+.history.reverse .history-text {
+    margin-left: 40px;
+    margin-right: 0;
+}
+
+.history-text h3 {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 28px;
+}
+
+.history-text p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 10px;
+}
+
+.future {
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 26px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+
+
+.history img {
+    /* 縦の大きさを一定にする */
+    height: 240px;      /* ここで高さを固定（お好みの数値に調整してください） */
+    
+    /* 横の長さは比率に合わせて自動調整 */
+    width: auto;        
+    
+    /* 念のため画像が歪まないように設定 */
+    object-fit: contain; 
+
+    /* デザインの調整 */
+    border-radius: 8px;
+    display: block;
+}
+
+
+
+@media (max-width: 768px) {
+    /* タイトル部分の調整 */
+    .title {
+        height: auto;
+        padding-top: 120px;
+        padding-bottom: 110px;
+        font-size: 24px;
+    }
+
+    .hitokoto {
+        font-size: 20px;
+    }
+
+    .about-image {
+        max-width: 200px; /* スマホでは少し小さく */
+    }
+
+    /* 「中等生の青春！！」吹き出しの調整 */
+    .seisyunn {
+        font-size: 20px; /* 文字を小さく */
+        width: 85%;
+        padding: 0.8rem;
+    }
+
+    /* 吹き出しのしっぽを中央に固定 */
+    .seisyunn:before,
+    .seisyunn:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* 「一言で言うなら」と説明文の余白をリセット */
+    .hitokoto {
+        margin-left: 20px;
+        text-align: center;
+    }
+
+    .ppp {
+        font-size: 18px;
+        margin: 20px; /* 左右の大きな余白をなくす */
+        line-height: 1.6;
+    }
+
+    /* 歴史セクションを縦並びに変更 */
+    .history, 
+    .history.reverse {
+        flex-direction: column; /* 縦に並べる */
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .history img {
+        width: 90%; /* 画像を横幅いっぱいに */
+        margin: 10px auto;
+        display: block;
+    }
+
+    .history-text {
+        max-width: 90%;
+        margin: 0 auto 10px;
+        text-align: center; /* テキストを中央寄せ */
+    }
+
+    .history.reverse .history-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* 未来へ、、、の文字サイズ調整 */
+    .future {
+        font-size: 20px;
+        text-align: center; /* スマホでは中央の方が見やすい */
+    }
+
+.history img {
+        width: 100%;    /* 横幅いっぱい */
+        height: auto;   /* 高さを自動に戻して比率を維持 */
+        max-width: 400px; 
+        margin: 10px auto;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

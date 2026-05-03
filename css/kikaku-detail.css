@@ -1,0 +1,56 @@
+/* 全体のレイアウト */
+.main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    color: #021d46;
+}
+
+h1 {
+    text-align: center;
+    border-bottom: 2px solid #333;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+/* 企画詳細のボックス */
+.kikaku-detail {
+    display: flex;
+    flex-wrap: wrap; /* 折り返しを許可 */
+    gap: 30px;
+    margin-top: 30px;
+    align-items: flex-start;
+}
+
+/* 画像の調整 */
+.kikaku-detail img {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 説明文の調整 */
+.kikaku-detail p {
+    flex: 2 1 400px; /* 画像より広めにスペースを取る */
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+h3 {
+    margin-top: 30px;
+    color: #e67e22; /* アクセントカラー */
+    font-size: 1.5rem;
+}
+
+
+/* メディアクエリ：画面幅が600px以下（スマホ想定）の場合 */
+@media (max-width: 600px) {
+
+    h2 {
+        font-size: 25px; /* 見出しを少し小さく */
+    }
+}

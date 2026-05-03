@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+/* タイトル部分の調整（スマホでは高さを抑える） */
+.title {
+    height: auto;
+    min-height: 200px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: center;
+    padding: 60px 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* コンテンツ全体の幅調整 */
+.syokuhan-contents {
+    width: 100%;
+    max-width: 1080px;
+    margin: 40px auto;
+    padding: 0 20px; /* 左右に余白を作る */
+    box-sizing: border-box;
+}
+
+/* リストのグリッド設定 */
+.syokuhan-list {
+    margin-top: 25px;
+    display: grid;
+    /* 画面幅に合わせて220px以上のカラムを自動で並べる */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    column-gap: 30px;
+    row-gap: 40px;
+    padding-bottom: 30px;
+    list-style: none;
+}
+
+/* 各アイテムのスタイル */
+.syokuhan-list li {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.syokuhan-list li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 画像が枠からはみ出さないようにする */
+.syokuhan-list img {
+    width: 100%;
+    height: 180px; /* 高さを統一 */
+    object-fit: cover; /* アスペクト比を保ちつつ切り抜き */
+    vertical-align: bottom;
+}
+
+/* テキスト部分の余白 */
+.syokuhan-list dl {
+    padding: 15px;
+}
+
+.syokuhan-list dt {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.syokuhan-list dd {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    color: #555;
+}
+
+.when {
+    padding: 0 15px 15px;
+    font-size: 13px;
+    color: #888;
+    margin: 0;
+}
+
+/* --- メディアクエリ: 画面幅が短い（スマホ等）の場合 --- */
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 20px;
+        min-height: 150px;
+    }
+    
+    .syokuhan-list {
+        /* スマホでは1列にする（お好みで2列も可） */
+        grid-template-columns: 1fr; 
+        column-gap: 0;
+    }
+
+    .syokuhan-list img {
+        height: 200px; /* スマホで見やすい高さに調整 */
+    }
+}

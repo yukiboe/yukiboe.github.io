@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+.title {
+    padding: 100px 20px 60px;
+    text-align: center;
+}
+
+
+
+
+/* 全体のコンテナ */
+.pamphlet-container {
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: sans-serif;
+}
+
+/* ビューワーとボタンを囲むエリア */
+.viewer-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #f4f4f4;
+  border-radius: 8px;
+  padding: 20px 0;
+}
+
+/* 閲覧エリア（横並び） */
+.scroll-viewer {
+  display: flex;
+  overflow-x: hidden; /* スワイプを禁止（ボタン操作のみ） */
+  scroll-behavior: smooth; /* 動きをなめらかに */
+  gap: 0;
+  width: 100%;
+}
+
+/* 各ページの画像サイズ調整 */
+.scroll-viewer img {
+  flex: 0 0 100%; /* 1回に1枚表示 */
+  width: 100%;
+  max-height: 500px; /* ここで高さを制限してサイズ調整 */
+  object-fit: contain; /* 縦横比を維持 */
+}
+
+/* 左右のボタン */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 15px 10px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 10;
+  transition: 0.3s;
+}
+
+.nav-btn:hover { background: rgba(0, 0, 0, 0.9); }
+.prev { left: 10px; border-radius: 0 5px 5px 0; }
+.next { right: 10px; border-radius: 5px 0 0 5px; }
+
+/* 下部ダウンロードボタン */
+.actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.download-btn {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.page-hint { font-size: 13px; color: #888; }
+
+
+
+@media (max-width: 480px) {
+  .nav-btn { width: 40px; font-size: 16px; }
+  .scroll-viewer { aspect-ratio: auto; height: 60vh; }
+  .download-btn { width:90%; font-size: 16px; }
+   
+.title{
+    padding: 80px 10px 40px;
+}
+}
+

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+
+.title {
+    height: 310px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 42px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+
+.syokuhan-contents {
+    width:1080px;
+    max-width: 90%;
+    margin-top: 75px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.syokuhan-list {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 220px);
+    column-gap: 60px;
+    row-gap: 60px;
+    padding-bottom: 30px;
+}

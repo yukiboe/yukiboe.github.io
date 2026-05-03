@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+/* タイトルエリア */
+.title {
+    height: 310px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 42px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+/* 局紹介コンテナ */
+.grid-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px; /* 局ごとの間隔をさらに広げて独立させる */
+    padding: 60px 20px 120px;
+}
+
+/* 局ごとの行（ハコをなくし、ミニマルに） */
+.section-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid #f0f0f0; /* 薄い下線のみ */
+    transition: all 0.3s ease;
+}
+
+/* ホバー時にアクセントカラーを強調 */
+.section-row:hover {
+    border-bottom-color: #ff4b2b;
+}
+
+/* 左側：タイトルとメッセージ */
+.content-header {
+    flex: 1.2;
+    min-width: 300px;
+}
+
+.content-header h3 {
+    font-size: 3rem; /* 局名をさらに強調 */
+    font-weight: 900;
+    margin: 0;
+    color: #111;
+    letter-spacing: -0.05em;
+    line-height: 1;
+}
+
+.content-header .desc {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #ff4b2b;
+    margin: 10px 0 25px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+/* 一言コメント */
+.content-header .comment {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    font-style: italic;
+    background: #fdfdfd;
+    padding: 10px;
+    border-left: 4px solid #ff4b2b;
+    margin-top: 15px;
+
+}
+
+/* 右側：仕事内容 */
+.job-list {
+    flex: 1;
+    min-width: 300px;
+    margin: 0;
+    padding: 10px 0 0 0;
+    list-style: none;
+}
+
+.job-list li {
+    font-size: 1.1rem;
+    color: #333;
+    padding: 15px 0;
+    border-bottom: 1px solid #f9f9f9;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.job-list li::before {
+    content: "—";
+    margin-right: 15px;
+    color: #ff4b2b;
+    font-weight: bold;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+    
+    .grid-container {
+        /* 左右に15%ずつの余白を持たせ、中央に寄せる */
+        padding: 40px 15% 80px 15%; 
+        gap: 60px;
+    }
+
+    .section-row {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        border-bottom: 1px solid #eee; /* スマホでは線を少し細く */
+    }
+
+    .content-header h3 {
+        font-size: 2.2rem;
+    }
+
+    .content-header .comment {
+        font-size: 0.95rem;
+        padding: 15px;
+        margin-right: 10px;
+        margin-right: 10px;
+    }
+
+    .job-list {
+        min-width: unset;
+        padding-top: 0;
+    }
+
+    .job-list li {
+        font-size: 0.95rem;
+        padding: 12px 0;
+    }
+}
+
+/* さらに小さい画面（スマホ）での調整 */
+@media (max-width: 480px) {
+    .grid-container {
+        /* 極小画面でも左右に10%（または固定値）の余白を死守 */
+        padding-left: 10%;
+        padding-right: 10%;
+        gap: 50px;
+    }
+
+    .content-header h3 {
+        font-size: 1.8rem; /* 画面幅が狭いので少しサイズダウン */
+    }
+
+
+    .content-header .comment {
+        font-size: 0.95rem;
+        padding: 15px;
+        margin-right: 10px;
+        margin-right: 10px;
+    }
+}
+

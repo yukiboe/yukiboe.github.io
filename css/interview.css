@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+/* 基本設定 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    line-height: 1.8;
+    /* background-color: #fff; 削除：common.cssの統一背景色を使用 */
+    -webkit-font-smoothing: antialiased; /* 文字を滑らかに */
+}
+
+/* タイトルエリア（メインビジュアル） */
+.title {
+    padding: 100px 20px 60px;
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+}
+
+
+
+/* コンテンツエリア */
+.interview-content {
+    max-width: 900px; /* 少し広めに設定 */
+    margin: 0 auto;
+}
+
+.lead-text {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 0 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 2;
+    color: #444;
+    position: relative;
+    text-align: center;
+}
+
+/* 本文エリア */
+.interview-body {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px 100px;
+}
+
+/* 質問と回答のセット */
+.interview-set {
+    margin-bottom: 60px;
+}
+
+.question {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #d32f2f; /* 委員長の情熱を赤系で表現（お好みで変更可） */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* 質問の頭に「Q.」をつける場合 */
+.question::before {
+    content: "Q.";
+    margin-right: 15px;
+    font-style: italic;
+    font-size: 1.6rem;
+    color: #ccc;
+}
+
+.answer {
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+    position: relative;
+    padding-left: 10px;
+}
+
+/* サブ写真 */
+.sub-photo {
+    margin: 60px -50px; /* PCでは少しはみ出させてダイナミックに */
+    text-align: center;
+}
+
+.sub-photo img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.sub-photo figcaption {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+
+/* --- レスポンシブ対応 --- */
+
+/* タブレット以下 (900px以下) */
+@media (max-width: 900px) {
+    .sub-photo {
+        margin: 50px 0; /* はみ出しを解除 */
+    }
+}
+
+/* スマホ (768px以下) */
+@media (max-width: 768px) {
+    /* ヘッダー固定対応：コンテンツ全体に余白を追加 */
+    .interview-content {
+        margin-top: 50px;
+    }
+
+    .title {
+        padding: 80px 10px 40px;
+
+    }
+
+    .title h1 {
+        font-size: 20px;
+        /* padding-top: 100px; 削除：ヘッダーとの重複を解消 */
+    }
+
+    .lead-text {
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 13px;
+        margin: 40px auto;
+    }
+
+    .question {
+        font-size: 1.2rem;
+    }
+
+    .question::before {
+        font-size: 1.3rem;
+    }
+
+    .answer {
+        font-size: 1rem;
+        padding-right: 3px;
+        padding-left: 3px;
+    }
+}

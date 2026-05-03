@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+
+
+.title {
+    height: 310px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 42px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.intro p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+}
+
+.note {
+    font-size: 0.9rem;
+    color: #666;
+    background: #eee;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+
+.map-container{
+    padding-left: 0%;
+}

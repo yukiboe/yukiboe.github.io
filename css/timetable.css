@@ -1,0 +1,243 @@
+@charset "UTF-8";
+
+
+.title {
+    height: 310px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 42px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+
+:root {
+    --main-color: #00d4ff;
+    --accent-color: #ff007b;
+    --bg-color: #f4f7f6;
+    --card-bg: #1a1a1a;
+}
+
+body {
+    font-family: sans-serif;
+    /* background-color: var(--bg-color); 削除：common.cssの統一背景色を使用 */
+    margin: 0;
+    padding: 20px;
+}
+
+.stage-container {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 95%; /* 画面端にピッタリくっつきすぎないよう調整 */
+}
+
+#full-timetable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px; /* 行の間隔を少し広げてゆったりと */
+    table-layout: fixed; /* 列の幅を固定して安定させる */
+}
+
+#full-timetable th {
+    padding: 15px;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+}
+
+#full-timetable td {
+    background: white;
+    padding: 20px 15px; /* 上下の余白を20pxに増やして高さを出す */
+    text-align: center;
+    font-size: 1rem; /* 文字を少し大きく */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* 1行ごとに軽い浮遊感 */
+}
+
+/* 列ごとの幅指定（お好みで調整してください） */
+#full-timetable th:nth-child(1) { width: 25%; } /* 時間列 */
+#full-timetable th:nth-child(2) { width: 50%; } /* 団体名列 */
+#full-timetable th:nth-child(3) { width: 25%; } /* 状況列 */
+
+
+.day-selector .tab-btn {
+    background: #e0e0e0; /* 会場タブと区別するために少し色を変えてもOK */
+    border-radius: 12px; /* 1段目は丸みを持たせると独立して見える */
+    margin-bottom: 5px;
+}
+
+.day-selector .tab-btn.active {
+    background: var(--main-color); /* 選択中の日は水色にするなど */
+    color: white;
+}
+
+
+
+
+/* --- レスポンシブ対応の強化 --- */
+
+@media (max-width: 600px) {
+    /* 1. タイトル部分の余白調整 */
+    .title {
+        height: auto;
+        padding: 60px 5px 30px;
+        font-size: 16px;
+    }
+
+    /* 2. タブメニューを折り返さないように調整（またはスクロール） */
+    .tab-menu {
+        gap: 3px;
+    }
+    
+    .tab-btn {
+        padding: 12px 2px;
+        font-size: 0.8rem; /* 文字を少し小さくして収める */
+    }
+
+    /* 3. テーブルの余白と文字サイズ */
+    #full-timetable th, 
+    #full-timetable td {
+        padding: 12px 5px;
+        font-size: 0.8rem;
+    }
+
+    /* 4. 列の幅をスマホ用に再調整 */
+    /* 時間と状況をミニマムにし、団体名を最大限広げる */
+    #full-timetable th:nth-child(1) { width: 30%; } /* 時間 */
+    #full-timetable th:nth-child(2) { width: auto; } /* 団体名 */
+    #full-timetable th:nth-child(3) { width: 25%; } /* 状況 */
+
+    /* 5. LIVEカード内の調整 */
+    .time-range {
+        font-size: 1rem;
+    }
+    #current-title {
+        font-size: 1.3rem;
+    }
+}
+
+.table-section {
+    margin-bottom: 14px;
+}
+
+/* さらに小さい画面（iPhone SEなど）への対応 */
+@media (max-width: 380px) {
+    .tab-btn {
+        font-size: 0.7rem;
+    }
+    #full-timetable td {
+        font-size: 0.75rem;
+    }
+}
+
+
+/* タブボタン */
+.tab-menu {
+    display: flex;
+    gap: 5px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 15px 5px;
+    border: none;
+    background: #ccc;
+    border-radius: 12px 12px 0 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #555;
+}
+
+.tab-btn.active {
+    background: var(--card-bg);
+    color: white;
+}
+
+/* メインカード */
+.card {
+    background: var(--card-bg);
+    color: white;
+    padding: 25px;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    border-left: 6px solid var(--main-color);
+}
+
+.label {
+    background: var(--accent-color);
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.time-range {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.progress-bar-container {
+    background: #333;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, var(--main-color), #00ffaa);
+    height: 100%;
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+/* テーブル */
+#full-timetable {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#full-timetable th {
+    background: #444;
+    color: white;
+    padding: 12px;
+}
+
+#full-timetable td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+/* 現在の行を光らせる */
+.row-active {
+    color: #e67e22;
+    font-weight: bold;
+}
+
+/* tdに背景色を指定してtrの背景色を上書き */
+.row-active td {
+    background: linear-gradient(90deg, #00d4ff33, #00d4ff66); /* 薄い水色グラデーション */
+}
+
+.live-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    margin-right: 5px;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+
