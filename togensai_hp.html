@@ -1,0 +1,190 @@
+
+ <div class="contact">
+            <h2>お問い合わせフォーム</h2>
+            <form action="14020_okazaki_takuma@school.kobe-u.ac.jp" method="post" enctype="text/plain">
+                <dl class="form-area">
+                    <dt><span class="required">お名前</span></dt>
+                    <dd><input class="input-text" type="text" name="name" required></dd>
+                    <dt><span class="required">メールアドレス</span></dt>
+                    <dd><input class="input-text" type="email" name="email" required></dd>
+                    <dt><span class="required">お電話番号</span></dt>
+                    <dd><input class="input-text" type="tel" name="tel" required></dd>
+                    <dt><span class="required">お問い合わせの種類</span></dt>
+                    <dd>
+                        <select class="select-box" name="genre">
+                            <option value="ご来場方法について" selected>アクセスについて</option>
+                            <option value="企画について">企画について</option>
+                            <option value="開催形態について">開催形態について</option>
+                            <option value="その他">その他</option>
+                        </select>
+                    </dd>
+                    <dt><span class="required">お客様について</span></dt>
+                    <dd>
+                        <input type="radio" name="customer" value="一般の方" checked>
+                        <label for="general">一般の方</label>
+                        <input type="radio" name="customer" value="本校生徒の方">
+                        <label for="student">本校生徒の方</label>
+                        <input type="radio" name="customer" value="保護者の方">
+                        <label for="guardian">保護者の方</label>
+                    </dd>
+                    <dt><span class="required">お問い合わせ内容</span></dt>
+                    <dd>
+                        <textarea class="message" name="message" required></textarea>
+                    </dd>
+                </dl>
+                <p class="confirm-tex">
+                    ご入力内容をご確認の上、お間違いがなければ[送信]ボタンを押してください
+                </p>
+                <button class="submit-button" type="submit">送信</button>
+            </form>
+        </div>
+
+
+
+
+
+
+
+.form-area {
+    background-color: #f8f8f8;
+    border: 1px solid #7d8df5;
+    margin-top: 25px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-area dt {
+    width: 200px;
+    padding: 15px 0;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.form-area dd {
+    width: calc(100% - 200px);
+    padding: 15px 0;
+}
+
+/* 必須ラベルの修正 */
+.form-area dt .required::after {
+    content: '必須';
+    color: #ff0000;
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: normal;
+}
+
+/* --- 入力項目 --- */
+.input-text {
+    width: 100%;
+    max-width: 280px;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+}
+
+.select-box {
+    width: 200px;
+    height: 40px;
+}
+
+.radio-button {
+    margin-top: 20px;
+    display: block;
+}
+
+.radio-button:first-child {
+    margin-top: 0;
+}
+
+.radio-button input {
+    margin-right: 8px;
+}
+
+.message {
+    width: 100%;
+    height: 260px;
+    padding: 10px;
+    line-height: 1.5;
+    border: 1px solid #ccc;
+}
+
+.confirm {
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 30px;
+}
+
+/* --- ボタン --- */
+.submit-button {
+    display: block;      /* inline-blockからblockに変更 */
+    margin-top: 35px;
+    margin-left: auto;   /* 左の余白を自動調整 */
+    margin-right: auto;  /* 右の余白を自動調整 */
+    min-width: 180px;
+    line-height: 48px;
+    margin-top: 35px;
+    cursor: pointer;
+    border: none;
+    background-color: #2439d7;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 24px;
+    text-align: center;
+    transition: background-color 0.3s;
+
+}
+
+.submit-button:hover {
+    background-color: #97acf2;
+}
+
+.footer {
+    margin-top: 100px;
+    padding-bottom: 50px;
+}
+
+
+
+/* スマホ表示 (レスポンシブ) */
+@media (max-width: 768px) {
+    .form-area {
+        display: block; /* Flexを解除 */
+        padding: 20px;
+    }
+
+    .form-area dt,
+    .form-area dd {
+        width: 100%; /* 全幅にする */
+        display: block;
+    }
+
+    .form-area dt {
+        padding-bottom: 5px; /* ラベルと入力欄を近づける */
+    }
+
+    .input-text, 
+    .select-box {
+        max-width: 100%; /* スマホでは横幅いっぱいに */
+    }
+}
+
+
+
+    /* dtとddを縦並びにする設定をメディアクエリ内に移動 */
+    .form-area dt,
+    .form-area dd {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .form-area dt {
+        padding-bottom: 0;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
