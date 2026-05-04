@@ -11,3 +11,6 @@ GitHub Pagesにデプロイ：https://yukiboe.github.io/13thTogensai/
 20250422
 Cloudflare結合
 カスタムドメインを設定：https://togensai.jp
+
+20260503
+第十四回兎原祭HP公開開始
