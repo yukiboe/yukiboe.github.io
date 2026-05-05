@@ -130,11 +130,11 @@ window.addEventListener('load', function () {
     },
     2: {
         "music-room": [ 
-            { name: "15Hz", start: "14:00", end: "15:00" } 
-            { name: "Oblio Trio Nostalgico", start: "14:00", end: "15:00" } 
-            { name: "AsRicotta", start: "10:00", end: "12:00" } 
-            { name: "有志バンド", start: "10:00", end: "12:00" } 
-            { name: "有志バンド", start: "10:00", end: "12:00" } 
+            { name: "15Hz", start: "14:00", end: "15:00" }, 
+            { name: "Oblio Trio Nostalgico", start: "14:00", end: "15:00" }, 
+            { name: "AsRicotta", start: "10:00", end: "12:00" }, 
+            { name: "有志バンド", start: "10:00", end: "12:00" }, 
+            { name: "有志バンド", start: "10:00", end: "12:00" }, 
             { name: "有志バンド", start: "10:00", end: "12:00" } 
             
             
@@ -149,7 +149,7 @@ window.addEventListener('load', function () {
             { name: "有志バンド", start: "10:00", end: "12:00" },
             { name: "有志バンド", start: "10:00", end: "12:00" },
             { name: "有志バンド", start: "10:00", end: "12:00" },
-            { name: "有志バンド", start: "10:00", end: "12:00" },
+            { name: "有志バンド", start: "10:00", end: "12:00" }
                    ],
         "arena": [
             { name: "吹奏楽部", start: "09:20", end: "10:10" },
