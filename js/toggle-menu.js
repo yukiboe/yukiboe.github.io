@@ -104,7 +104,8 @@ window.addEventListener('load', function () {
     }
 
     const allSchedules = {
-    1: {
+    
+         1: {
         "music-room": [
             
             { name: "Oblio Trio Nostalgico", start: "10:30", end: "11:10" },
@@ -128,29 +129,10 @@ window.addEventListener('load', function () {
             { name: "吹奏楽部", start: "14:00", end: "14:50" }
         ]
     },
-    2: {
-        "music-room": [ 
-            { name: "15Hz", start: "14:00", end: "15:00" }, 
-            { name: "Oblio Trio Nostalgico", start: "14:00", end: "15:00" }, 
-            { name: "AsRicotta", start: "10:00", end: "12:00" }, 
-            { name: "有志バンド", start: "10:00", end: "12:00" }, 
-            { name: "有志バンド", start: "10:00", end: "12:00" }, 
-            { name: "有志バンド", start: "10:00", end: "12:00" } 
-            
-            
     
-                       
-                      
-                      ],
-        "outdoor": [ 
-            { name: "有志バンド", start: "10:00", end: "12:00" },
-            { name: "有志バンド", start: "10:00", end: "12:00" },
-            { name: "有志バンド", start: "10:00", end: "12:00" },
-            { name: "有志バンド", start: "10:00", end: "12:00" },
-            { name: "有志バンド", start: "10:00", end: "12:00" },
-            { name: "有志バンド", start: "10:00", end: "12:00" },
-            { name: "有志バンド", start: "10:00", end: "12:00" }
-                   ],
+    2: {
+        "music-room": [ { name: "閉会式", start: "14:00", end: "15:00" } ],
+        "outdoor": [ { name: "有志バンド", start: "10:00", end: "12:00" } ],
         "arena": [
             { name: "吹奏楽部", start: "09:20", end: "10:10" },
             { name: "ASTAクイズ班", start: "11:10", end: "11:50" },
