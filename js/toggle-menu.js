@@ -143,13 +143,13 @@ window.addEventListener('load', function () {
                       
                       ],
         "outdoor": [ 
-            { name: "有志バンド", start: "10:00", end: "12:00" } ,
-            { name: "有志バンド", start: "10:00", end: "12:00" } ,
-            { name: "有志バンド", start: "10:00", end: "12:00" } ,
-            { name: "有志バンド", start: "10:00", end: "12:00" } ,
-            { name: "有志バンド", start: "10:00", end: "12:00" } ,
-            { name: "有志バンド", start: "10:00", end: "12:00" } ,
-            { name: "有志バンド", start: "10:00", end: "12:00" } ,
+            { name: "有志バンド", start: "10:00", end: "12:00" },
+            { name: "有志バンド", start: "10:00", end: "12:00" },
+            { name: "有志バンド", start: "10:00", end: "12:00" },
+            { name: "有志バンド", start: "10:00", end: "12:00" },
+            { name: "有志バンド", start: "10:00", end: "12:00" },
+            { name: "有志バンド", start: "10:00", end: "12:00" },
+            { name: "有志バンド", start: "10:00", end: "12:00" },
                    ],
         "arena": [
             { name: "吹奏楽部", start: "09:20", end: "10:10" },
