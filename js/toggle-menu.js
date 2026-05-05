@@ -106,15 +106,19 @@ window.addEventListener('load', function () {
     const allSchedules = {
     1: {
         "music-room": [
-            { name: "15Hz", start: "09:40", end: "9:50" },
-            { name: "アライグマの友情", start: "10:20", end: "10:30" },
-            { name: "Queen of YAMATAIKOKU", start: "11:00", end: "11:20" },
-            { name: "ダンス", start: "11:50", end: "13:00" },
-            { name: "うに醤油", start: "13:20", end: "13:30" }
+            
+            { name: "Oblio Trio Nostalgico", start: "10:30", end: "11:10" },
+            { name: "PandA", start: "11:20", end: "11:50" },
+            { name: "ナマラメンコイズ", start: "12:00", end: "12:30" },
+            { name: "AsRicotta", start: "12:50", end: "13:20" },
+            { name: "狂言", start: "13:40", end: "14:40" }
         ],
         "outdoor": [
-            { name: "演劇部「夏空」", start: "09:30", end: "11:30" },
-            { name: "チアリーディング", start: "13:00", end: "14:00" }
+            { name: "15Hz", start: "09:40", end: "9:50" },
+            { name: "アライグマの友情", start: "10:10", end: "10:40" },
+            { name: "Queen of YAMATAIKOKU", start: "10:50", end: "11:20" },
+            { name: "AsRicotta", start: "11:40", end: "13:00" },
+            { name: "うに醤油", start: "14:10", end: "14:20" }
         ],
         "arena": [
             { name: "コーラス部", start: "09:20", end: "10:10" },
@@ -125,8 +129,28 @@ window.addEventListener('load', function () {
         ]
     },
     2: {
-        "music-room": [ { name: "閉会式", start: "14:00", end: "15:00" } ],
-        "outdoor": [ { name: "有志バンド", start: "10:00", end: "12:00" } ],
+        "music-room": [ 
+            { name: "15Hz", start: "14:00", end: "15:00" } 
+            { name: "Oblio Trio Nostalgico", start: "14:00", end: "15:00" } 
+            { name: "AsRicotta", start: "10:00", end: "12:00" } 
+            { name: "有志バンド", start: "10:00", end: "12:00" } 
+            { name: "有志バンド", start: "10:00", end: "12:00" } 
+            { name: "有志バンド", start: "10:00", end: "12:00" } 
+            
+            
+    
+                       
+                      
+                      ],
+        "outdoor": [ 
+            { name: "有志バンド", start: "10:00", end: "12:00" } 
+            { name: "有志バンド", start: "10:00", end: "12:00" } 
+            { name: "有志バンド", start: "10:00", end: "12:00" } 
+            { name: "有志バンド", start: "10:00", end: "12:00" } 
+            { name: "有志バンド", start: "10:00", end: "12:00" } 
+            { name: "有志バンド", start: "10:00", end: "12:00" } 
+            { name: "有志バンド", start: "10:00", end: "12:00" } 
+                   ],
         "arena": [
             { name: "吹奏楽部", start: "09:20", end: "10:10" },
             { name: "ASTAクイズ班", start: "11:10", end: "11:50" },
