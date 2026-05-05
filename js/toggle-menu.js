@@ -106,7 +106,7 @@ window.addEventListener('load', function () {
     const allSchedules = {
     1: {
         "music-room": [
-            { name: "15Hz", start: "09:40", end: "10:00" },
+            { name: "15Hz", start: "09:40", end: "9:50" },
             { name: "アライグマの友情", start: "10:20", end: "10:30" },
             { name: "Queen of YAMATAIKOKU", start: "11:00", end: "11:20" },
             { name: "ダンス", start: "11:50", end: "13:00" },
