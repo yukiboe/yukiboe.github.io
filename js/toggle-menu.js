@@ -144,10 +144,10 @@ window.addEventListener('load', function () {
         "music-room": [ 
             { name: "15Hz", start: "14:00", end: "15:00" }, 
             { name: "Oblio Trio Nostalgico", start: "14:00", end: "15:00" }, 
-            { name: "AsRicotta", start: "10:00", end: "12:00" }, 
-            { name: "有志バンド", start: "10:00", end: "12:00" }, 
-            { name: "有志バンド", start: "10:00", end: "12:00" }, 
-            { name: "有志バンド", start: "10:00", end: "12:00" } 
+            { name: "AsRicotta", start: "11:00", end: "11:40" }, 
+            { name: "狂言", start: "12：10", end: "13:10" }, 
+            { name: "Queen Of YAMATAIKOKU", start: "13:30", end: "14:00" }, 
+            { name: "ステージフィナーレ", start: "14:10", end: "14:20" } 
             
             
     
@@ -155,13 +155,13 @@ window.addEventListener('load', function () {
                       
                       ],
         "outdoor": [ 
-            { name: "有志バンド", start: "10:00", end: "12:00" },
-            { name: "有志バンド", start: "10:00", end: "12:00" },
-            { name: "有志バンド", start: "10:00", end: "12:00" },
-            { name: "有志バンド", start: "10:00", end: "12:00" },
-            { name: "有志バンド", start: "10:00", end: "12:00" },
-            { name: "有志バンド", start: "10:00", end: "12:00" },
-            { name: "有志バンド", start: "10:00", end: "12:00" }
+            { name: "ビンゴ大会", start: "9:10", end: "9:50" },
+            { name: "うに醤油", start: "10:00", end: "10:10" },
+            { name: "のど自慢大会", start: "10:20", end: "11:00" },
+            { name: "PandA", start: "11:10", end: "11:40" },
+            { name: "AsRicotta", start: "12:00", end: "13:20" },
+            { name: "ナマラメンコイズ", start: "13:30", end: "14:00" },
+            { name: "ステージフィナーレ", start: "14:20", end: "14:50" }
                    ],
         "arena": [
             { name: "吹奏楽部", start: "09:20", end: "10:10" },
