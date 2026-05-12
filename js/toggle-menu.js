@@ -126,28 +126,30 @@ window.addEventListener('load', function () {
             { name: "狂言", start: "13:40", end: "14:40" }
         ],
         "outdoor": [
-            { name: "15Hz", start: "09:40", end: "9:50" },
+            { name: "15Hz", start: "09:30", end: "9:50" },
             { name: "アライグマの友情", start: "10:10", end: "10:40" },
             { name: "Queen of YAMATAIKOKU", start: "10:50", end: "11:20" },
             { name: "AsRicotta", start: "11:40", end: "13:00" },
+            { name: "うに醤油", start: "13:10", end: "13:20" },
+            { name: "とげたんパレード", start: "13:30", end: "14:00" },
             { name: "うに醤油", start: "14:10", end: "14:20" }
         ],
         "arena": [
             { name: "コーラス部", start: "09:20", end: "10:10" },
             { name: "うばらハーモニー", start: "10:10", end: "10:30" },
-            { name: "ASTAクイズ班", start: "11:10", end: "11:40" },
+            { name: "ASTAクイズ班", start: "11:10", end: "11:50" },
             { name: "演劇部", start: "12:50", end: "13:20" },
             { name: "吹奏楽部", start: "14:00", end: "14:50" }
         ]
     },
     2: {
         "music-room": [ 
-            { name: "15Hz", start: "14:00", end: "15:00" }, 
-            { name: "Oblio Trio Nostalgico", start: "14:00", end: "15:00" }, 
+            { name: "15Hz", start: "9:10", end: "9:30" }, 
+            { name: "Oblio Trio Nostalgico", start: "10:10", end: "10:50" }, 
             { name: "AsRicotta", start: "11:00", end: "11:40" }, 
             { name: "狂言", start: "12：10", end: "13:10" }, 
             { name: "Queen Of YAMATAIKOKU", start: "13:30", end: "14:00" }, 
-            { name: "ステージフィナーレ", start: "14:10", end: "14:20" } 
+            { name: "うに醤油", start: "14:10", end: "14:20" } 
             
             
     
