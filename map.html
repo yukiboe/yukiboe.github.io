@@ -1,99 +1,144 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>準備中 | 第14回兎原祭</title>
-    <style>
-        :root {
-            --main-color: #00d4ff;
-            --accent-color: #ff007b;
-            --bg-color: #f4f7f6;
-            --text-color: #333;
-        }
+    <title>第14回兎原祭</title>
+    <meta name="description" content="兎原祭の公式サイトです。">
+    <meta name="viewport" content="width=device-width">
+    <script defer src="./js/toggle-menu.js"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/map.css">
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
 
-        .container {
-            padding: 40px 20px;
-        }
 
-        .icon {
-            font-size: 60px;
-            margin-bottom: 20px;
-            display: inline-block;
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-            40% {transform: translateY(-20px);}
-            60% {transform: translateY(-10px);}
-        }
-
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            color: var(--text-color);
-        }
-
-        p {
-            font-size: 1.1rem;
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-
-        .btn-back {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--main-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .btn-back:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
-        }
-
-        .footer-logo {
-            margin-top: 50px;
-            opacity: 0.6;
-        }
-
-        .footer-logo img {
-            width: 100px;
-        }
-    </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="icon">🚧</div>
-        <h1>Coming Soon</h1>
-        <p>このページは現在準備中です。<br>公開まで今しばらくお待ちください。</p>
-        
-        <a href="index.html" class="btn-back">トップページへ戻る</a>
+    <header class="header">
+        <div class="header-inner">
+            <a class="header-logo" href="./index.html" >
+                <img src="images/無題43_0030-12-25_20260404202725.png" alt="兎原祭のロゴ">
+            </a>
+            <button class="toggle-menu-button" aria-label="メニューを開閉"></button>
+            <div class="header-site-menu">
+                <nav class="site-menu">
+                    <ul>
+                        <li class="menu" data-menu="kikaku">
+                            <p class="menu-trigger">企画</p>                  
+                            <ul class="child_menu">
+                                <li><a href="./map.html">マップ</a></li>
+                                <li><a href="./timetable.html">タイムテーブル</a></li>
+                                <li><a href="./kikaku.html">企画一覧</a></li>
+                                <li><a href="./syokuhan.html">食販情報</a></li>
+                            </ul>
+                        </li>
 
-        <div class="footer-logo">
-            <img src="images/無題43_0030-12-25_20260404202725.png" alt="兎原祭ロゴ">
+                        <li class="menu" data-menu="about">
+                            <p class="menu-trigger">兎原祭について</p>
+                            <ul class="child_menu">
+                                <li><a href="./abouttogensai.html">兎原祭とは</a></li>
+                                <li><a href="./goods.html">グッズ情報</a></li>
+                                <li><a href="./interview.html">実行委員長インタビュー</a></li>
+                                <li><a href="./tfpt.html">実行委員会紹介</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="menu" data-menu="pamphlet">
+                            <p class="menu-trigger">パンフレット</p>
+                            <ul class="child_menu">
+                                <li><a href="./pamphlet.html">パンフレット</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="menu" data-menu="access">
+                            <p class="menu-trigger">アクセス</p>
+                            <ul class="child_menu">
+                                <li><a href="./access.html">本校へのアクセス</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-    </div>
+    </header>
+    <main class="main">
 
+        <div class="title">
+            <h1>マップ</h1>
+        </div>
+
+        <section class="intro">
+            <p>兎原祭開催期間の校内マップです。</p>
+            <p class="note">企画や場所をタップするとそのページに飛びます。</p>
+        </section>
+
+        <div class="kikaku-contents">
+            <div class="kikaku-nav">
+                <h2><a href="map.html">一階</a></h2>
+                <h2><a href="map2.html">二階</a></h2>
+                <h2><a href="map3.html">三階</a></h2>
+            </div>
+        </div>
+        
+
+
+
+        <div class="map-container">
+            <img src="images2/校内マップ確定版一階.svg" usemap="#ImageMap" alt="" />
+<map name="ImageMap">
+  <area shape="rect" coords="232,83,278,111" href="kikakuEE-detail.html" alt="" />
+  <area shape="rect" coords="233,112,278,130" href="kikakuVV-detail.html" alt="" />
+  <area shape="rect" coords="283,82,328,109" href="kikakuBB-detail.html" alt="" />
+  <area shape="rect" coords="283,111,327,133" href="kikakuCC-detail.html" alt="" />
+  <area shape="rect" coords="333,83,374,130" href="kikakuP-detail.html" alt="" />
+  <area shape="rect" coords="376,51,430,76" href="kikakuQQ-detail.html" alt="" />
+  <area shape="rect" coords="465,130,512,179" href="kikakuPC-detail.html" alt="" />
+  <area shape="rect" coords="465,184,511,232" href="kikakuFF-detail.html" alt="" />
+  <area shape="rect" coords="233,199,278,250" href="kikakuDD-detail.html" alt="" />
+  <area shape="rect" coords="281,199,329,248" href="kikakuQQ-detail.html" alt="" />
+  <area shape="rect" coords="331,199,376,248" href="kikakuQQ-detail.html" alt="" />
+  <area shape="rect" coords="381,199,424,248" href="kikakuQ-detail.html" alt="" />
+  <area shape="rect" coords="135,177,180,225" href="kikakuW-detail.html" alt="" />
+  <area shape="rect" coords="311,415,436,482" href="kikaku6.html" alt="" />
+  <area shape="rect" coords="5,391,183,484" href="kikakuN-detail.html" alt="" />
+  <area shape="rect" coords="943,77,1113,263" href="kikakuV-detail.html" alt="" />
+  <area shape="rect" coords="339,139,385,157" href="kikakuX-detail.html" alt="" />
+  <area shape="rect" coords="644,34,707,67" href="kikaku1.html" alt="" />
+  <area shape="rect" coords="516,39,574,71" href="kikaku2.html" alt="" />
+  <area shape="rect" coords="451,258,507,291" href="kikaku3.html" alt="" />
+  <area shape="rect" coords="265,35,314,68" href="kikaku4.html" alt="" />
+  <area shape="rect" coords="257,257,309,290" href="kikaku5.html" alt="" />
+</map>
+
+       
+
+
+</div>
+
+
+
+
+
+        <div class="speed-bg">
+  <div class="line1"></div>
+  <div class="line1"></div>
+  <div class="line1"></div>
+  <div class="line1"></div>
+  <div class="line1"></div>
+</div>
+
+    </main>
+    <footer class="footer">
+         
+         <a class="footer-logo" href="./index.html">
+             <img src="images/togensailogo.jpeg" alt="兎原祭ロゴ" >
+         </a>
+         <div class="footer-sns-icons">
+            <a href="https://www.instagram.com/ku_secondary_kouhou/" aria-label="Instagram">IG</a>
+            <a href="https://x.com/KU_Secondary" aria-label="X">X</a>
+            <a href="https://www.edu.kobe-u.ac.jp/kuss-top/" aria-label="School Website">HP</a>
+        </div>
+            <p class="copyright">© 2026 兎原祭実行委員会</p>
+    </footer>
 </body>
 </html>
