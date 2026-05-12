@@ -35,3 +35,40 @@
 .map-container{
     padding-left: 0%;
 }
+
+.kikaku-nav {
+  display: flex;        /* 横並びにする */
+  flex-wrap: wrap;      /* 画面幅が狭いときに自動で折り返す */
+  justify-content: center; /* 中央寄せ */
+  gap: 12px;           /* ボタン同士の隙間 */
+  margin-top: 30px;
+  margin-bottom: 60px;  /* 下のカードリストとの距離 */
+}
+
+.kikaku-nav h2 {
+  margin: 0;           /* デフォルトの余白を消す */
+  height: auto;
+  font-size: 18px;     /* 横並びなので少し小さめに */
+}
+
+.kikaku-nav h2 a {
+  display: block;
+  padding: 8px 18px;
+  background-color: rgba(255, 255, 255, 0.8); /* 背景透過 */
+  color: #333;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 20px; /* 丸みのあるデザイン */
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px); /* 背景のスピードラインを少し透かす */
+}
+
+/* マウスを乗せた時・タップした時 */
+.kikaku-nav h2 a:hover {
+  background-color: #ff9900;
+  color: #fff;
+  border-color: #ff9900;
+  transform: translateY(-3px); /* 少し浮き上がる演出 */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
