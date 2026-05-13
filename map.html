@@ -8,16 +8,39 @@
     <script defer src="./js/toggle-menu.js"></script>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/map.css">
-    <script src="/js/imageMapResizer.min.js"></script>
-<script>
-  // ページ読み込み後にimageMaoResizerを初期化
-  document.addEventListener('DOMContentLoaded', function() {
-    imageMapResizer();
-  });
-</script>
-
-
-
+    <style>
+        .map-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        .map-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .map-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .map-area {
+            position: absolute;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+        
+        .map-area:hover {
+            opacity: 0.2;
+            background-color: rgba(255, 200, 100, 0.5);
+        }
+    </style>
 </head>
 <body>
 
@@ -76,7 +99,7 @@
 
         <section class="intro">
             <p>兎原祭開催期間の校内マップです。</p>
-            <p class="note">企画や場所をタップするとそのページに飛びます。（現在PCのみ）</p>
+            <p class="note">企画や場所をタップするとそのページに飛びます。</p>
         </section>
 
         <div class="kikaku-contents">
@@ -86,53 +109,19 @@
                 <h2><a href="map3.html">三階</a></h2>
             </div>
         </div>
-        
-
-
 
         <div class="map-container">
-            <img src="images2/校内マップ確定版一階.svg" usemap="#ImageMap" alt="" />
-<map name="ImageMap">
-  <area shape="rect" coords="232,83,278,111" href="kikakuEE-detail.html" alt="" />
-  <area shape="rect" coords="233,112,278,130" href="kikakuVV-detail.html" alt="" />
-  <area shape="rect" coords="283,82,328,109" href="kikakuBB-detail.html" alt="" />
-  <area shape="rect" coords="283,111,327,133" href="kikakuCC-detail.html" alt="" />
-  <area shape="rect" coords="333,83,374,130" href="kikakuP-detail.html" alt="" />
-  <area shape="rect" coords="376,51,430,76" href="kikakuQQ-detail.html" alt="" />
-  <area shape="rect" coords="465,130,512,179" href="kikakuPC-detail.html" alt="" />
-  <area shape="rect" coords="465,184,511,232" href="kikakuFF-detail.html" alt="" />
-  <area shape="rect" coords="233,199,278,250" href="kikakuDD-detail.html" alt="" />
-  <area shape="rect" coords="281,199,329,248" href="kikakuQQ-detail.html" alt="" />
-  <area shape="rect" coords="331,199,376,248" href="kikakuQQ-detail.html" alt="" />
-  <area shape="rect" coords="381,199,424,248" href="kikakuQ-detail.html" alt="" />
-  <area shape="rect" coords="135,177,180,225" href="kikakuW-detail.html" alt="" />
-  <area shape="rect" coords="311,415,436,482" href="kikaku6.html" alt="" />
-  <area shape="rect" coords="5,391,183,484" href="kikakuN-detail.html" alt="" />
-  <area shape="rect" coords="943,77,1113,263" href="kikakuV-detail.html" alt="" />
-  <area shape="rect" coords="339,139,385,157" href="kikakuX-detail.html" alt="" />
-  <area shape="rect" coords="644,34,707,67" href="kikaku1.html" alt="" />
-  <area shape="rect" coords="516,39,574,71" href="kikaku2.html" alt="" />
-  <area shape="rect" coords="451,258,507,291" href="kikaku3.html" alt="" />
-  <area shape="rect" coords="265,35,314,68" href="kikaku4.html" alt="" />
-  <area shape="rect" coords="257,257,309,290" href="kikaku5.html" alt="" />
-</map>
-
-       
-
-
-</div>
-
-
-
-
+            <img id="mapImage" src="images2/校内マップ確定版一階.svg" alt="校内マップ一階" />
+            <div class="map-overlay" id="mapOverlay"></div>
+        </div>
 
         <div class="speed-bg">
-  <div class="line1"></div>
-  <div class="line1"></div>
-  <div class="line1"></div>
-  <div class="line1"></div>
-  <div class="line1"></div>
-</div>
+            <div class="line1"></div>
+            <div class="line1"></div>
+            <div class="line1"></div>
+            <div class="line1"></div>
+            <div class="line1"></div>
+        </div>
 
     </main>
     <footer class="footer">
@@ -147,5 +136,79 @@
         </div>
             <p class="copyright">© 2026 兎原祭実行委員会</p>
     </footer>
+
+    <script>
+        // マップの領域定義
+        const mapAreas = [
+            { coords: [250, 95, 300, 130], href: "kikakuEE-detail.html" },
+            { coords: [250, 130, 300, 150], href: "kikakuVV-detail.html" },
+            { coords: [305, 95, 355, 130], href: "kikakuBB-detail.html" },
+            { coords: [305, 130, 355, 150], href: "kikakuCC-detail.html" },
+            { coords: [360, 95, 405, 150], href: "kikakuP-detail.html" },
+            { coords: [405, 51, 470, 90], href: "kikakuQQ-detail.html" },
+            { coords: [500, 150, 555, 200], href: "kikakuPC-detail.html" },
+            { coords: [500, 210, 555, 265], href: "kikakuFF-detail.html" },
+            { coords: [250, 230, 300, 285], href: "kikakuDD-detail.html" },
+            { coords: [305, 230, 350, 285], href: "kikakuQQ-detail.html" },
+            { coords: [355, 230, 400, 285], href: "kikakuQQ-detail.html" },
+            { coords: [415, 230, 455, 285], href: "kikakuQ-detail.html" },
+            { coords: [145, 205, 200, 257], href: "kikakuW-detail.html" },
+            { coords: [341, 475, 460, 550], href: "kikaku6.html" },
+            { coords: [5, 451, 183, 554], href: "kikakuN-detail.html" },
+            { coords: [1023, 77, 1193, 283], href: "kikakuV-detail.html" },
+            { coords: [370, 160, 420, 178], href: "kikakuX-detail.html" },
+            { coords: [695, 50, 760, 83], href: "kikaku1.html" },
+            { coords: [564, 50, 620, 83], href: "kikaku2.html" },
+            { coords: [471, 303, 547, 331], href: "kikaku3.html" },
+            { coords: [285, 50, 334, 83], href: "kikaku4.html" },
+            { coords: [277, 303, 329, 331], href: "kikaku5.html" }
+        ];
+
+        // 元の画像サイズ（必要に応じて調整）
+        const originalWidth = 1200;
+        const originalHeight = 600;
+
+        function createMapAreas() {
+            const mapImage = document.getElementById('mapImage');
+            const mapOverlay = document.getElementById('mapOverlay');
+            
+            mapOverlay.innerHTML = '';
+
+            const currentWidth = mapImage.offsetWidth;
+            const currentHeight = mapImage.offsetHeight;
+            
+            const scaleX = currentWidth / originalWidth;
+            const scaleY = currentHeight / originalHeight;
+
+            mapAreas.forEach(area => {
+                const [x1, y1, x2, y2] = area.coords;
+                
+                const element = document.createElement('a');
+                element.href = area.href;
+                element.className = 'map-area';
+                element.style.left = (x1 * scaleX) + 'px';
+                element.style.top = (y1 * scaleY) + 'px';
+                element.style.width = ((x2 - x1) * scaleX) + 'px';
+                element.style.height = ((y2 - y1) * scaleY) + 'px';
+                
+                mapOverlay.appendChild(element);
+            });
+        }
+
+        // 初期化
+        document.addEventListener('DOMContentLoaded', function() {
+            createMapAreas();
+        });
+
+        // リサイズ時に再計算
+        window.addEventListener('resize', function() {
+            createMapAreas();
+        });
+
+        // 画像読み込み後も実行
+        document.getElementById('mapImage').addEventListener('load', function() {
+            createMapAreas();
+        });
+    </script>
 </body>
 </html>
