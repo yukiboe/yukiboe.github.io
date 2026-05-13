@@ -144,7 +144,7 @@ window.addEventListener('load', function () {
     },
     2: {
         "music-room": [ 
-            { name: "15Hz", start: "9:10", end: "9:30" }, 
+            { name: "15Hz", start: "09:10", end: "09:30" }, 
             { name: "Oblio Trio Nostalgico", start: "10:10", end: "10:50" }, 
             { name: "AsRicotta", start: "11:00", end: "11:40" }, 
             { name: "狂言", start: "12:10", end: "13:10" }, 
@@ -157,7 +157,7 @@ window.addEventListener('load', function () {
                       
                       ],
         "outdoor": [ 
-            { name: "ビンゴ大会", start: "9:10", end: "9:50" },
+            { name: "ビンゴ大会", start: "09:10", end: "09:50" },
             { name: "うに醤油", start: "10:00", end: "10:10" },
             { name: "のど自慢大会", start: "10:20", end: "11:00" },
             { name: "PandA", start: "11:10", end: "11:40" },
