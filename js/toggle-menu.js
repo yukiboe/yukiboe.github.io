@@ -147,7 +147,7 @@ window.addEventListener('load', function () {
             { name: "15Hz", start: "9:10", end: "9:30" }, 
             { name: "Oblio Trio Nostalgico", start: "10:10", end: "10:50" }, 
             { name: "AsRicotta", start: "11:00", end: "11:40" }, 
-            { name: "狂言", start: "12：10", end: "13:10" }, 
+            { name: "狂言", start: "12:10", end: "13:10" }, 
             { name: "Queen Of YAMATAIKOKU", start: "13:30", end: "14:00" }, 
             { name: "うに醤油", start: "14:10", end: "14:20" } 
             
