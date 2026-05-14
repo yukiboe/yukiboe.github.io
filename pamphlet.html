@@ -1,100 +1,149 @@
 
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>準備中 | 第14回兎原祭</title>
-    <style>
-        :root {
-            --main-color: #00d4ff;
-            --accent-color: #ff007b;
-            --bg-color: #f4f7f6;
-            --text-color: #333;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
-
-        .container {
-            padding: 40px 20px;
-        }
-
-        .icon {
-            font-size: 60px;
-            margin-bottom: 20px;
-            display: inline-block;
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-            40% {transform: translateY(-20px);}
-            60% {transform: translateY(-10px);}
-        }
-
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            color: var(--text-color);
-        }
-
-        p {
-            font-size: 1.1rem;
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-
-        .btn-back {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--main-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .btn-back:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
-        }
-
-        .footer-logo {
-            margin-top: 50px;
-            opacity: 0.6;
-        }
-
-        .footer-logo img {
-            width: 100px;
-        }
-    </style>
+    <title>第14回兎原祭</title>
+    <meta name="description" content="兎原祭の公式サイトです。">
+    <meta name="viewport" content="width=device-width">
+    <script defer src="./js/toggle-menu.js"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/pamphlet.css">
 </head>
 <body>
 
-    <div class="container">
-        <div class="icon">🚧</div>
-        <h1>Coming Soon</h1>
-        <p>このページは現在準備中です。<br>公開まで今しばらくお待ちください。</p>
-        
-        <a href="index.html" class="btn-back">トップページへ戻る</a>
+    <header class="header">
+        <div class="header-inner">
+            <a class="header-logo" href="./index.html" >
+                <img src="images/無題43_0030-12-25_20260404202725.png" alt="兎原祭のロゴ">
+            </a>
+            <button class="toggle-menu-button" aria-label="メニューを開閉"></button>
+            <div class="header-site-menu">
+                <nav class="site-menu">
+                    <ul>
+                        <li class="menu" data-menu="kikaku">
+                            <p class="menu-trigger">企画</p>                  
+                            <ul class="child_menu">
+                                <li><a href="./map.html">マップ</a></li>
+                                <li><a href="./timetable.html">タイムテーブル</a></li>
+                                <li><a href="./kikaku.html">企画一覧</a></li>
+                                <li><a href="./syokuhan.html">食販情報</a></li>
+                            </ul>
+                        </li>
 
-        <div class="footer-logo">
-            <img src="images/無題43_0030-12-25_20260404202725.png" alt="兎原祭ロゴ">
+                        <li class="menu" data-menu="about">
+                            <p class="menu-trigger">兎原祭について</p>
+                            <ul class="child_menu">
+                                <li><a href="./abouttogensai.html">兎原祭とは</a></li>
+                                <li><a href="./goods.html">グッズ情報</a></li>
+                                <li><a href="./interview.html">実行委員長インタビュー</a></li>
+                                <li><a href="./tfpt.html">実行委員会紹介</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="menu" data-menu="pamphlet">
+                            <p class="menu-trigger">パンフレット</p>
+                            <ul class="child_menu">
+                                <li><a href="./pamphlet.html">パンフレット</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="menu" data-menu="access">
+                            <p class="menu-trigger">アクセス</p>
+                            <ul class="child_menu">
+                                <li><a href="./access.html">本校へのアクセス</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
+    </header>
+    <main class="main">
+
+
+        <div class="title">
+            <h1>パンフレット</h1>
+        </div>
+
+
+        <div class="pamphlet-container">
+  
+  <div class="viewer-wrapper">
+    <button class="nav-btn prev" onclick="scrollBtn(-1)">❮</button>
+
+    <div class="scroll-viewer" id="viewer">
+      <img src="images2/3268122f.png" alt="1ページ目">
+      <img src="images2/101d6c1f.png" alt="2ページ目">
+      <img src="images2/0c088483.png" alt="3ページ目">
+      <img src="images2/57fa23ed.png" alt="4ページ目">
+      <img src="images2/ac749b05.png" alt="5ページ目">
+      <img src="images2/b62162cc.png" alt="6ページ目">
+      <img src="images2/c78ba782.png" alt="7ページ目">
+      <img src="images2/9b7cd3a2_1.png" alt="8ページ目">
+      <img src="images2/d3fdc597_1.png" alt="9ページ目">
+      <img src="images2/ed8105f6_1.png" alt="10ページ目">
+      <img src="images2/3f3a9e23_1.png" alt="11ページ目">
+      <img src="images2/bc37ba63.png" alt="12ページ目">
+      <img src="images2/c45f108d.png" alt="13ページ目">
+
+    
     </div>
 
+    <button class="nav-btn next" onclick="scrollBtn(1)">❯</button>
+  </div>
+
+  <div class="actions">
+    <p class="page-hint">左右のボタンでページをめくれます</p>
+    <a href="path/to/pamphlet.pdf" download class="download-btn">
+      PDF版をダウンロード (2.5MB)
+    </a>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="speed-bg">
+  <div class="line1"></div>
+  <div class="line1"></div>
+  <div class="line1"></div>
+  <div class="line1"></div>
+  <div class="line1"></div>
+</div>
+
+
+
+
+
+
+
+    </main>
+    <footer class="footer">
+         
+         <a class="footer-logo" href="./index.html">
+             <img src="images/togensailogo.jpeg" alt="兎原祭ロゴ" >
+         </a>
+         <div class="footer-sns-icons">
+            <a href="https://www.instagram.com/ku_secondary_kouhou/" aria-label="Instagram">IG</a>
+            <a href="https://x.com/KU_Secondary" aria-label="X">X</a>
+            <a href="https://www.edu.kobe-u.ac.jp/kuss-top/" aria-label="School Website">HP</a>
+        </div>
+            <p class="copyright">© 2026 兎原祭実行委員会</p>
+    </footer>
 </body>
 </html>
